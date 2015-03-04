@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="android:Theme.Holo.Light">
+        <!-- 窗体背景 -->
+        <item name="android:windowBackground">@drawable/windowBackground</item>
+        <item name="android:textColorHint">#e1e1e1</item>
+        <item name="android:windowAnimationStyle">@style/window_animation</item>
+        <item name="android:actionBarStyle">@style/mActionBarStyle</item>
+    </style>
+
+    <style name="window_animation">
+        <!--打开新的activity 用的动画-->
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+
+        <!--关闭activity时的动画-->
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <style name="mActionBarStyle" parent="android:Widget.Holo.Light.ActionBar">
+        <item name="android:background">#f8a9f4</item>
+        <!--<item name="android:itemBackground">@drawable/click</item>-->
+    </style>
+
+    <drawable name="windowBackground">#f5f5f5</drawable>
+</resources>

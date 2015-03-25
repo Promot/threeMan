@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:orientation="vertical"
+             android:background="@color/divid_gray"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             tools:context=".Dialog.HomePop">
+
+    <TableRow
+        style="@style/homepop_item"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1px"
+        >
+
+        <ImageView
+            android:id="@+id/homepop_img"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@mipmap/ic_launcher"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/pop_home_name_tv"
+                android:layout_weight="1"
+                style="@style/subTitle_b_b_font"
+                android:layout_width="0dp"
+                android:layout_margin="5dp"
+                android:text="俞敏洪"
+                android:singleLine="true"
+                android:minWidth="60dp"
+                android:maxEms="5"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:background="@color/divider_color"
+                android:layout_width="1dp"
+                android:layout_height="20dp"></View>
+
+            <TextView
+                android:id="@+id/pop_home_unrgt_tv"
+                android:padding="5dp"
+                style="@style/nomal_grag_font"
+                android:text="@string/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/pop_home_tv_tr"
+        style="@style/homepop_item"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1px"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_camera"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/subTitle_b_b_font"
+            android:text="@string/tv_center"/>
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/pop_home_setting_tr"
+        style="@style/homepop_item"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1px"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_set_as"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/subTitle_b_b_font"
+            android:text="@string/setting"/>
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/pop_home_gold_tr"
+        style="@style/homepop_item"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1px"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_media_play"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/subTitle_b_b_font"
+            android:text="@string/gold"/>
+
+    </TableRow>
+
+
+</TableLayout>

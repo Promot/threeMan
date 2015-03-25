@@ -1,6 +1,19 @@
 <resources>
-    <string name="app_name">ThreeMan</string>
+    <string name="app_name">三身行</string>
+    <string name="search">搜索</string>
+    <string name="logout">注销</string>
+    <string name="login">登录</string>
+    <string name="tv_center">视频中心</string>
+    <string name="setting">设置</string>
+    <string name="gold">金币</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string-array name="home_tabs">
+        <item>首页</item>
+        <item>学科</item>
+        <item>教师</item>
+    </string-array>
+
+    <string name="search_hint">搜索课程、企业</string>
+
+
 </resources>

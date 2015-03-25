@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#feeeee</color>
+    <color name="title_green">#34baa2</color>
+    <color name="sel_green">#A6BEA6</color>
+    <color name="divid_gray">#9B9B9B</color>
+    <color name="black">#111111</color>
+</resources>

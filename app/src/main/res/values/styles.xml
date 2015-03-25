@@ -1,8 +1,36 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Black">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:textColorHint">@color/tab_gray</item>
     </style>
+
+
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Base.V11.Theme.AppCompat">-->
+    <!--<item name="android:windowNoTitle">true</item>-->
+    <!--<item name="android:windowFrame">@null</item>-->
+    <!--</style>-->
+
+
+    <!--<style name="HomeActionBarStyle" parent="Base.Theme.AppCompat">-->
+    <!--<item name="android:actionBarStyle">@style/MyHomeActionBarStyle</item>-->
+    <!--<item name="actionBarStyle">@style/MyHomeActionBarStyle</item>-->
+    <!--<item name="android:titleTextStyle">@style/MyHomeTitleTextStyle</item>-->
+    <!--<item name="titleTextStyle">@style/MyHomeTitleTextStyle</item>-->
+    <!--</style>-->
+
+    <!--<style name="MyHomeActionBarStyle" parent="Widget.AppCompat.Light.ActionBar">-->
+    <!--<item name="android:background">@color/title_green</item>-->
+    <!--<item name="background">@color/title_green</item>-->
+    <!--</style>-->
+
+    <!--<style name="MyHomeTitleTextStyle" parent="Base.TextAppearance.AppCompat.Title">-->
+    <!--<item name="android:color">@android:color/white</item>-->
+    <!--<item name="color">@android:color/white</item>-->
+    <!--<item name="android:textColor">@android:color/white</item>-->
+    <!--</style>-->
+
 
 </resources>

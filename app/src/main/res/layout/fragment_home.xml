@@ -1,0 +1,38 @@
+<com.promote.jchlib.util.view.PagerScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.promote.threeman.main.HomeFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_pag_height">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/home_pager"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+            <com.promote.jchlib.util.view.PagerIndicator
+                android:layout_width="match_parent"
+                android:id="@+id/home_indicator"
+                app:nomal_icon="@mipmap/indicator_nomal"
+                app:cur_icon="@mipmap/indicator_cur"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="bottom"
+                android:layout_height="@dimen/home_pag_ind_height"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</com.promote.jchlib.util.view.PagerScrollView>

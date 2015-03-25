@@ -20,6 +20,16 @@ public abstract class SearchActionBarActivity extends BaseActivity {
     private ImageButton actionsearchib;
     private EditText searchEt;
 
+    /**
+     * search actionBar callBack.
+     */
+    public interface SearchCallBack {
+
+        public void onSearch(String key);
+
+        public void onSearchEditChange(String key);
+    }
+
     @Override
     protected View addActionBarView() {
 

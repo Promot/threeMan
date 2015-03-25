@@ -2,8 +2,76 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:orientation="vertical"
+              android:background="@color/bg_gray"
               android:layout_height="match_parent"
               tools:context="com.promote.threeman.search.SearchActivity">
 
+    <LinearLayout
+        android:id="@+id/search_key_ll"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+        <LinearLayout
+            style="@style/common_pad_white"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="@dimen/search_icon_size"
+                android:layout_height="@dimen/search_icon_size"
+                android:background="@color/red"/>
+
+            <TextView
+                style="@style/subTitle_gray1_font"
+                android:text="@string/hote_search"
+                android:paddingLeft="@dimen/common_pad_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <GridView
+            style="@style/common_pad"
+            android:id="@+id/search_key_gv"
+            android:layout_width="match_parent"
+            android:numColumns="3"
+            android:verticalSpacing="@dimen/common_pad_m"
+            android:horizontalSpacing="@dimen/common_pad_m"
+            android:background="@color/bg_gray"
+            android:stretchMode="columnWidth"
+            android:layout_height="120dp"></GridView>
+
+        <LinearLayout
+            style="@style/common_pad_white"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="@dimen/search_icon_size"
+                android:layout_height="@dimen/search_icon_size"
+                android:background="@color/red"/>
+
+            <TextView
+                style="@style/subTitle_gray1_font"
+                android:text="@string/history_search"
+                android:paddingLeft="@dimen/common_pad_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/search_key_lv"
+            android:divider="@color/divider_color"
+            android:dividerHeight="1px"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:footerDividersEnabled="true"></ListView>
+
+
+    </LinearLayout>
 </LinearLayout>

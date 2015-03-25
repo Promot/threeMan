@@ -13,5 +13,12 @@
     <dimen name="action_pad">10dp</dimen>
     <dimen name="action_search_pad_l_r">10dp</dimen>
     <dimen name="actino_search_radio">55dp</dimen>
+    <!-- common_pad -->
+    <dimen name="common_pad_b">15dp</dimen>
+    <dimen name="common_pad_m">10dp</dimen>
+    <dimen name="common_pad_s">5dp</dimen>
+
+    <!-- search -->
+    <dimen name="search_icon_size">30dp</dimen>
 
 </resources>

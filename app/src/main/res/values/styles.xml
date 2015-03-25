@@ -1,30 +1,14 @@
 <resources>
 
+    <style name="common_pad">
+        <item name="android:paddingLeft">@dimen/common_pad_b</item>
+        <item name="android:paddingRight">@dimen/common_pad_b</item>
+        <item name="android:paddingTop">@dimen/common_pad_m</item>
+        <item name="android:paddingBottom">@dimen/common_pad_m</item>
+    </style>
 
-    <!-- Base application theme. -->
-    <!--<style name="AppTheme" parent="Base.V11.Theme.AppCompat">-->
-    <!--<item name="android:windowNoTitle">true</item>-->
-    <!--<item name="android:windowFrame">@null</item>-->
-    <!--</style>-->
-
-
-    <!--<style name="HomeActionBarStyle" parent="Base.Theme.AppCompat">-->
-    <!--<item name="android:actionBarStyle">@style/MyHomeActionBarStyle</item>-->
-    <!--<item name="actionBarStyle">@style/MyHomeActionBarStyle</item>-->
-    <!--<item name="android:titleTextStyle">@style/MyHomeTitleTextStyle</item>-->
-    <!--<item name="titleTextStyle">@style/MyHomeTitleTextStyle</item>-->
-    <!--</style>-->
-
-    <!--<style name="MyHomeActionBarStyle" parent="Widget.AppCompat.Light.ActionBar">-->
-    <!--<item name="android:background">@color/title_green</item>-->
-    <!--<item name="background">@color/title_green</item>-->
-    <!--</style>-->
-
-    <!--<style name="MyHomeTitleTextStyle" parent="Base.TextAppearance.AppCompat.Title">-->
-    <!--<item name="android:color">@android:color/white</item>-->
-    <!--<item name="color">@android:color/white</item>-->
-    <!--<item name="android:textColor">@android:color/white</item>-->
-    <!--</style>-->
-
+    <style name="common_pad_white" parent="@style/common_pad">
+        <item name="android:background">@color/white_pure</item>
+    </style>
 
 </resources>

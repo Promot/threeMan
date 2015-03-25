@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="AppTheme" parent="android:Theme.Holo.Light">
         <!-- 窗体背景 -->
         <item name="android:windowBackground">@drawable/windowBackground</item>
-        <item name="android:textColorHint">#e1e1e1</item>
         <item name="android:windowAnimationStyle">@style/window_animation</item>
         <item name="android:actionBarStyle">@style/mActionBarStyle</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:textColorHint">@color/tab_gray</item>
     </style>
 
     <style name="window_animation">

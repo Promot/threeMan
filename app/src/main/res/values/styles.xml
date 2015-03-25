@@ -1,11 +1,5 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowFrame">@null</item>
-        <item name="android:textColorHint">@color/tab_gray</item>
-    </style>
-
 
     <!-- Base application theme. -->
     <!--<style name="AppTheme" parent="Base.V11.Theme.AppCompat">-->

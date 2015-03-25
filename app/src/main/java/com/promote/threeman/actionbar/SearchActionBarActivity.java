@@ -31,9 +31,9 @@ public abstract class SearchActionBarActivity extends BaseActivity {
     }
 
     private void initialize(View view) {
-        actionbackib = (ImageButton) findViewById(R.id.action_back_ib);
-        actionsearchib = (ImageButton) findViewById(R.id.action_search_ib);
-        searchEt = (EditText) findViewById(R.id.search_et);
+        actionbackib = (ImageButton) view.findViewById(R.id.action_back_ib);
+        actionsearchib = (ImageButton) view.findViewById(R.id.action_search_ib);
+        searchEt = (EditText) view.findViewById(R.id.search_et);
 
         MyOnclickListener onclickListener = new MyOnclickListener();
         actionbackib.setOnClickListener(onclickListener);
@@ -49,7 +49,7 @@ public abstract class SearchActionBarActivity extends BaseActivity {
             switch (id) {
                 case R.id.action_back_ib: {
 
-
+                    back();
                     break;
                 }
 

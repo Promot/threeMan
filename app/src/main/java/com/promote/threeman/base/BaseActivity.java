@@ -23,12 +23,12 @@ public abstract class BaseActivity extends FragmentActivity {
         setContentView(R.layout.activity_base);
         contentLayout = (LinearLayout) findViewById(R.id.base_content_layout);
 
-        View actionBar = addActionBarView();
+        View actionBar = addActionBarView();        //添加actionBar.
         if (actionBar == null)
             throw new NullPointerException("BaseActivity actionBarView is null");
         contentLayout.addView(actionBar);
 
-        contentView = addContentView();
+        contentView = addContentView();             //添加contentView.
         if (contentView == null)
             throw new NullPointerException("BaseActivity contentview is null");
         contentLayout.addView(contentView);

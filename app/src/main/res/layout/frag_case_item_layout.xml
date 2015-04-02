@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                style="@style/common_pad_white_s"
+                android:gravity="center_vertical"
+                android:background="@drawable/whit_item_bg_sel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/frag_case_item_img"
+        android:layout_width="140dp"
+        android:background="@color/red"
+        android:scaleType="centerCrop"
+        android:layout_height="80dp"/>
+
+    <LinearLayout
+        android:id="@+id/frag_case_btm_ll"
+        android:layout_toRightOf="@id/frag_case_item_img"
+        android:orientation="horizontal"
+        android:layout_marginLeft="5dp"
+        android:layout_alignBottom="@id/frag_case_item_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@string/click_num"
+            style="@style/nomal_grag_font"
+            android:layout_marginRight="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/frag_case_item_click_num_tv"
+            android:layout_width="wrap_content"
+            style="@style/nomal_blue_font"
+            android:text="115"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/frag_case_item_img"
+        android:layout_alignTop="@id/frag_case_item_img"
+        android:layout_above="@id/frag_case_btm_ll"
+        android:layout_marginLeft="5dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/frag_case_item_title_tv"
+            android:maxLines="2"
+            android:ellipsize="end"
+            style="@style/subTitle_b_font"
+            android:text="年号纪念地方i哦啊烦了浇点水囧偶读说loi的飞洒发送发的说法范德萨"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

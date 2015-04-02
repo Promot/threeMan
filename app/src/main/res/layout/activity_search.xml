@@ -13,7 +13,7 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
-            style="@style/common_pad_white"
+            style="@style/common_pad_white_b"
             android:layout_width="match_parent"
             android:orientation="horizontal"
             android:gravity="center_vertical"
@@ -38,14 +38,15 @@
             android:id="@+id/search_key_gv"
             android:layout_width="match_parent"
             android:numColumns="3"
+            android:listSelector="@android:color/transparent"
             android:verticalSpacing="@dimen/common_pad_m"
             android:horizontalSpacing="@dimen/common_pad_m"
             android:background="@color/bg_gray"
             android:stretchMode="columnWidth"
-            android:layout_height="120dp"></GridView>
+            android:layout_height="wrap_content"></GridView>
 
         <LinearLayout
-            style="@style/common_pad_white"
+            style="@style/common_pad_white_b"
             android:layout_width="match_parent"
             android:orientation="horizontal"
             android:gravity="center_vertical"
@@ -67,11 +68,29 @@
         <ListView
             android:id="@+id/search_key_lv"
             android:divider="@color/divider_color"
-            android:dividerHeight="1px"
+            android:dividerHeight="1dp"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:listSelector="@drawable/menu_item_bg_sel"
+            android:layout_height="wrap_content"
             android:footerDividersEnabled="true"></ListView>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/search_clear_tv"
+                android:text="@string/clear_history"
+                android:paddingRight="@dimen/common_pad_b"
+                android:paddingTop="@dimen/common_pad_m"
+                android:paddingLeft="@dimen/common_pad_b"
+                android:paddingBottom="@dimen/common_pad_m"
+                style="@style/subTitle_green_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
 
     </LinearLayout>
 </LinearLayout>

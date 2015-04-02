@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          style="@style/subTitle_gray1_font"
+          android:paddingLeft="@dimen/common_pad_b"
+          android:paddingTop="@dimen/common_pad_b"
+          android:paddingBottom="@dimen/common_pad_b"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"/>

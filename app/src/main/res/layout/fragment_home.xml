@@ -9,6 +9,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
+        android:background="@color/bg_gray"
         android:layout_height="match_parent">
 
         <FrameLayout
@@ -32,6 +33,148 @@
 
         </FrameLayout>
 
+        <com.promote.jchlib.util.view.ScrollGridView
+            android:layout_width="wrap_content"
+            android:numColumns="4"
+            android:id="@+id/home_type_gv"
+            style="@style/common_pad_white_b"
+            android:horizontalSpacing="@dimen/common_pad_b"
+            android:verticalSpacing="@dimen/common_pad_m"
+            android:layout_height="wrap_content"></com.promote.jchlib.util.view.ScrollGridView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hom_item_div"/>
+        <!-- 按需求 -->
+        <LinearLayout
+            style="@style/common_pad_white_b"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@android:drawable/ic_media_rew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                style="@style/subTitle_b_font"
+                android:text="@string/home_by_need"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="1px"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/home_nine_1_img"
+                android:scaleType="centerCrop"
+                android:layout_width="wrap_content"
+                android:layout_weight="5"
+                android:layout_marginRight="1px"
+                android:background="@color/white_pure"
+                android:layout_height="120dp"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_weight="4"
+                android:orientation="vertical"
+                android:layout_height="120dp">
+
+                <ImageView
+                    android:id="@+id/home_nine_2_img"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_weight="5"
+                    android:background="@color/white_pure"
+                    android:layout_height="60dp"/>
+
+                <ImageView
+                    android:id="@+id/home_nine_3_img"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_weight="5"
+                    android:layout_marginTop="1px"
+                    android:background="@color/white_pure"
+                    android:layout_height="60dp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="1px"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:id="@+id/home_nine_4_img"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_weight="5"
+                android:layout_marginRight="1px"
+                android:background="@color/white_pure"
+                android:layout_height="60dp"/>
+
+            <ImageView
+                android:id="@+id/home_nine_5_img"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_weight="5"
+                android:layout_marginRight="1px"
+                android:background="@color/white_pure"
+                android:layout_height="60dp"/>
+
+            <ImageView
+                android:id="@+id/home_nine_6_img"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_weight="5"
+                android:background="@color/white_pure"
+                android:layout_height="60dp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hom_item_div"/>
+
+        <!-- 按行业 -->
+        <LinearLayout
+            style="@style/common_pad_white_b"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="1px"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@android:drawable/ic_menu_recent_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                style="@style/subTitle_b_font"
+                android:text="@string/home_by_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <com.promote.jchlib.util.view.ScrollGridView
+            android:id="@+id/home_6_type"
+            android:numColumns="2"
+            android:horizontalSpacing="1px"
+            android:verticalSpacing="1px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.promote.jchlib.util.view.ScrollGridView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hom_item_div"/>
     </LinearLayout>
 
 

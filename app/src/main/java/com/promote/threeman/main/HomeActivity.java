@@ -42,11 +42,11 @@ public class HomeActivity extends HomeActionBarActivity implements ViewPager.OnP
 
         frags = new Fragment[3];
         HomeFragment homeFragment = HomeFragment.newInstance(null, null);
-        SubjectFragment subjectFragment = SubjectFragment.newInstance(null, null);
-        TeacherFragment teacherFragment = TeacherFragment.newInstance(null, null);
+        ThreeFragment threeFragment = ThreeFragment.newInstance(null, null);
+        CaseFragment caseFragment = CaseFragment.newInstance(null, null);
         frags[0] = homeFragment;
-        frags[1] = subjectFragment;
-        frags[2] = teacherFragment;
+        frags[1] = threeFragment;
+        frags[2] = caseFragment;
 
         fragAdapter = new MyPagerFragAdapter(getSupportFragmentManager());
         homepager.setAdapter(fragAdapter);

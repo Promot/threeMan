@@ -2,16 +2,27 @@ package com.promote.threeman.search;
 
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.GridView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 
 import com.promote.threeman.R;
 import com.promote.threeman.actionbar.SearchActionBarActivity;
+import com.promote.threeman.impl.SearchTestData;
 
-public class SearchActivity extends SearchActionBarActivity implements SearchActionBarActivity.SearchCallBack {
+/**
+ * search activity.
+ */
+public class SearchActivity extends SearchActionBarActivity implements SearchActionBarActivity
+        .SearchCallBack {
 
-    private ImageButton actionbackib;
-    private ImageButton actionsearchib;
-
+    private GridView searchkeygv;
+    private ListView searchkeylv;
+    private LinearLayout searchkeyll;
+    private ArrayAdapter<String> hoteSearchAdapter;
+    private ArrayAdapter<String> searchHistoryAdapter;
 
     @Override
     protected View addContentView() {
@@ -22,16 +33,9 @@ public class SearchActivity extends SearchActionBarActivity implements SearchAct
         return view;
     }
 
-    private void initialize(View view) {
-
-        actionbackib = (ImageButton) view.findViewById(R.id.action_back_ib);
-        actionsearchib = (ImageButton) view.findViewById(R.id.action_search_ib);
-
-    }
-
-
     @Override
     public void onSearch(String key) {
+
 
     }
 
@@ -39,4 +43,44 @@ public class SearchActivity extends SearchActionBarActivity implements SearchAct
     public void onSearchEditChange(String key) {
 
     }
+
+    private void initialize(View view) {
+
+        searchkeygv = (GridView) view.findViewById(R.id.search_key_gv);
+        searchkeylv = (ListView) view.findViewById(R.id.search_key_lv);
+        searchkeyll = (LinearLayout) view.findViewById(R.id.search_key_ll);
+
+        hoteSearchAdapter = new ArrayAdapter<String>(getApplicationContext(),
+                R.layout.hotsearch_item);
+        searchHistoryAdapter = new ArrayAdapter<String>(getApplicationContext(),
+                R.layout.search_history_item);
+        searchkeygv.setAdapter(hoteSearchAdapter);
+        searchkeylv.setAdapter(searchHistoryAdapter);
+        searchkeygv.setOnItemClickListener(new HotSearchCLS());
+        searchkeylv.setOnItemClickListener(new HistorySearchCLS());
+
+        hoteSearchAdapter.addAll(SearchTestData.hotSearch());
+        searchHistoryAdapter.addAll(SearchTestData.hotSearch());
+
+    }
+
+    private class HotSearchCLS implements AdapterView.OnItemClickListener {
+
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+
+        }
+    }
+
+    private class HistorySearchCLS implements AdapterView.OnItemClickListener {
+
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+
+        }
+    }
+
+
 }

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item android:state_pressed="true">
         <shape>
             <gradient
@@ -14,9 +13,9 @@
     <item>
         <shape>
             <gradient
-                android:endColor="@color/white"
-                android:centerColor="@color/white"
-                android:startColor="@color/white"/>
+                android:endColor="@color/white_pure"
+                android:centerColor="@color/white_pure"
+                android:startColor="@color/white_pure"/>
         </shape>
     </item>
 

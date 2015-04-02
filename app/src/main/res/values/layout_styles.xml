@@ -8,9 +8,19 @@
         <item name="android:background">@drawable/menu_item_bg_sel</item>
     </style>
 
+    <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hom_item_div"/>-->
+
+    <style name="divid_tyle_m">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/common_divid_m</item>
+    </style>
+
     <style name="divid_line">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1px</item>
         <item name="android:background">@color/divid_gray</item>
     </style>
+
 </resources>

@@ -11,13 +11,16 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.promote.jchlib.util.view.PagerIndicator;
 import com.promote.jchlib.util.view.ScrollGridView;
 import com.promote.threeman.R;
 import com.promote.threeman.impl.HomeTestData;
 
+import java.util.ArrayList;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -26,7 +29,7 @@ import java.util.concurrent.TimeUnit;
  * A simple {@link android.support.v4.app.Fragment} subclass.
  * Activities that contain this fragment must implement the
  * to handle interaction events.
- * Use the {@link com.promote.threeman.main.HomeFragment#newInstance} factory method to
+ * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class HomeFragment extends Fragment implements ViewPager.OnPageChangeListener {
@@ -40,13 +43,29 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
-    private PagerIndicator homeindicator;
     private ViewPager homePager;
     private MyPagerAdapter adapter;
     private ScheduledExecutorService executorService = null;
     private ScrollGridView gridView;
     //pager 改变时间间隔。秒
     private static final int PAGE_UNIT = 5;
+    private PagerIndicator homeindicator;
+    private ScrollGridView hometypegv;
+    private ImageView homenine1img;
+    private ImageView homenine2img;
+    private ImageView homenine3img;
+    private ImageView homenine4img;
+    private ImageView homenine5img;
+    private ImageView homenine6img;
+    private ScrollGridView home6type;
+
+    private String[] eightTypes;
+
+    private ArrayList<String> sixTypes;
+
+    private EightTypeAdapter eightTypeAdapter;
+    private SixTypeAdapter sixTypeAdapter;
+
 
     /**
      * Use this factory method to create a new instance of
@@ -78,6 +97,46 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
         executorService = Executors.newSingleThreadScheduledExecutor();
+    }
+
+
+    private void initialize(View view) {
+
+        homeindicator = (PagerIndicator) view.findViewById(R.id.home_indicator);
+        homePager = (ViewPager) view.findViewById(R.id.home_pager);
+
+        hometypegv = (ScrollGridView) view.findViewById(R.id.home_type_gv);
+        homenine1img = (ImageView) view.findViewById(R.id.home_nine_1_img);
+        homenine2img = (ImageView) view.findViewById(R.id.home_nine_2_img);
+        homenine3img = (ImageView) view.findViewById(R.id.home_nine_3_img);
+        homenine4img = (ImageView) view.findViewById(R.id.home_nine_4_img);
+        homenine5img = (ImageView) view.findViewById(R.id.home_nine_5_img);
+        homenine6img = (ImageView) view.findViewById(R.id.home_nine_6_img);
+        home6type = (ScrollGridView) view.findViewById(R.id.home_6_type);
+
+        eightTypes = getResources().getStringArray(R.array.home_eight_type);
+
+        adapter = new MyPagerAdapter();
+
+        homePager.setAdapter(adapter);
+        homePager.setOnPageChangeListener(this);
+        homePager.setCurrentItem(adapter.getStartpoiont());
+
+        eightTypeAdapter = new EightTypeAdapter();
+        hometypegv.setAdapter(eightTypeAdapter);
+
+        sixTypeAdapter = new SixTypeAdapter();
+        home6type.setAdapter(sixTypeAdapter);
+
+        initTestData();
+    }
+
+    /**
+     * 本地填充测试数据。
+     */
+    private void initTestData() {
+        sixTypes = HomeTestData.getSixTypeData();
+        sixTypeAdapter.notifyDataSetChanged(sixTypes);
     }
 
     private class MySchedule implements Runnable {
@@ -126,19 +185,6 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
 
     }
 
-
-    private void initialize(View view) {
-
-        homeindicator = (PagerIndicator) view.findViewById(R.id.home_indicator);
-        homePager = (ViewPager) view.findViewById(R.id.home_pager);
-        adapter = new MyPagerAdapter();
-
-        homePager.setAdapter(adapter);
-        homePager.setOnPageChangeListener(this);
-        homePager.setCurrentItem(adapter.getStartpoiont());
-
-    }
-
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -155,6 +201,10 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
 
     }
 
+
+    /**
+     * 滚动viewpager adapter.
+     */
     private class MyPagerAdapter extends PagerAdapter {
 
         /**
@@ -200,7 +250,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
                 if (i == 1)
                     img.setBackgroundColor(getResources().getColor(android.R.color.darker_gray));
                 if (i == 2)
-                    img.setBackgroundColor(getResources().getColor(R.color.sel_green));
+                    img.setBackgroundColor(getResources().getColor(R.color.sel_blue));
                 imageViews[i] = img;
             }
 
@@ -239,6 +289,131 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
 
         @Override
         public void destroyItem(ViewGroup container, int position, Object object) {
+        }
+    }
+
+    /**
+     * 第二项八个分类的adapter.
+     */
+    private class EightTypeAdapter extends BaseAdapter {
+
+
+        @Override
+        public int getCount() {
+            return eightTypes.length;
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return eightTypes[position];
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            convertView = LayoutInflater.from(getActivity().getApplicationContext()).inflate(R
+                    .layout.home_eight_item_layout, null);
+            ImageView imageView = (ImageView) convertView.findViewById(R.id.home_eight_item_img);
+            TextView tv = (TextView) convertView.findViewById(R.id.home_eight_item_tv);
+
+            imageView.setImageResource(getResource(position));
+            tv.setText(eightTypes[position]);
+
+            return convertView;
+        }
+
+        private int getResource(int position) {
+
+            switch (position) {
+
+                case 0: {
+                    return R.mipmap.three_about_comp;
+                }
+                case 1: {
+                    return R.mipmap.three_about_comp;
+                }
+                case 2: {
+                    return R.mipmap.three_about_comp;
+                }
+                case 3: {
+                    return R.mipmap.three_about_comp;
+                }
+                case 4: {
+                    return R.mipmap.three_about_comp;
+                }
+                case 5: {
+                    return R.mipmap.three_about_comp;
+                }
+                case 6: {
+                    return R.mipmap.three_about_comp;
+                }
+                case 7: {
+                    return R.mipmap.three_about_comp;
+                }
+                case 8: {
+                    return R.mipmap.three_about_comp;
+                }
+                default: {
+                    throw new IndexOutOfBoundsException("the index of eight type is out of bound");
+                }
+
+
+            }
+
+        }
+
+    }
+
+    /**
+     * 按行业分类，六行业adapter.
+     */
+    private class SixTypeAdapter extends BaseAdapter {
+
+        private ArrayList<String> types = new ArrayList<>();
+
+        public void notifyDataSetChanged(ArrayList<String> types) {
+
+            if (types != null) {
+                this.types.clear();
+                this.types.addAll(types);
+            }
+            super.notifyDataSetChanged();
+        }
+
+        @Override
+        public int getCount() {
+            return types.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return types.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            convertView = LayoutInflater.from(getActivity().getApplicationContext()).inflate(R
+                    .layout.home_6_type_gv_item, null);
+            ImageView img = (ImageView) convertView.findViewById(R.id.home_6_type_item_img);
+            // set img resource
+            //img.setR...       position
+
+            ViewGroup.LayoutParams params = img.getLayoutParams();
+            params.height = 100;
+            img.setLayoutParams(params);
+
+
+            return convertView;
         }
     }
 

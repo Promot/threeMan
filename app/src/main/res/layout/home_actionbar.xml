@@ -4,50 +4,76 @@
              android:orientation="vertical"
              android:layout_width="match_parent"
              android:layout_height="@dimen/action_height"
-             android:background="@color/title_green"
+             android:background="@color/title_blue"
     >
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:background="@color/title_green"
+        android:background="@color/title_blue"
         android:layout_height="@dimen/action_height">
 
-        <ImageButton
-            android:id="@+id/home_action_icon"
+
+        <LinearLayout
+            android:id="@+id/home_left_ll"
             android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:src="@mipmap/ic_launcher"
-            android:scaleType="centerInside"
-            android:background="@android:color/transparent"
-            android:layout_width="@dimen/aciton_btn_width"
-            android:layout_height="match_parent"/>
-
-        <TextView
-            android:id="@+id/home_action_title_tv"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:text="@string/app_name"
-            android:layout_toRightOf="@id/home_action_icon"
-            style="@style/whit_title_font"/>
+            android:gravity="center_vertical"
+            android:layout_height="match_parent">
 
-        <ImageButton
-            android:id="@+id/home_action_menu"
+            <ImageButton
+                android:id="@+id/home_action_icon"
+                android:src="@mipmap/ic_launcher"
+                android:scaleType="centerInside"
+
+                android:background="@android:color/transparent"
+                android:layout_width="@dimen/aciton_btn_width"
+                android:layout_height="match_parent"/>
+
+            <ImageButton
+                android:id="@+id/action_back_ib"
+                android:visibility="gone"
+                android:layout_width="@dimen/action_height"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:background="@android:color/transparent"
+                android:src="@drawable/back_sel"
+                />
+
+            <TextView
+                android:id="@+id/home_action_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:singleLine="true"
+                android:ellipsize="end"
+                style="@style/whit_title_font"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/actionbar_r_rl"
+            android:layout_width="wrap_content"
+            android:layout_toLeftOf="@id/home_left_ll"
             android:layout_alignParentRight="true"
-            android:scaleType="centerInside"
-            android:background="@android:color/transparent"
-            android:src="@android:drawable/ic_menu_info_details"
-            android:layout_width="@dimen/aciton_btn_width"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent">
 
-        <ImageButton
-            android:id="@+id/home_action_search"
-            android:scaleType="centerInside"
-            android:background="@android:color/transparent"
-            android:src="@android:drawable/ic_menu_search"
-            android:layout_toLeftOf="@id/home_action_menu"
-            android:layout_width="@dimen/aciton_btn_width"
-            android:layout_height="match_parent"/>
+            <ImageButton
+                android:id="@+id/home_action_menu"
+                android:scaleType="centerInside"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:src="@android:drawable/ic_menu_info_details"
+                android:layout_width="@dimen/aciton_btn_width"
+                android:layout_height="match_parent"/>
+
+            <ImageButton
+                android:id="@+id/home_action_search"
+                android:scaleType="centerInside"
+                android:background="@android:color/transparent"
+                android:src="@android:drawable/ic_menu_search"
+                android:layout_toLeftOf="@id/home_action_menu"
+                android:layout_width="@dimen/aciton_btn_width"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
 
     </RelativeLayout>
 </FrameLayout>

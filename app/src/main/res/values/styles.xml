@@ -7,8 +7,31 @@
         <item name="android:paddingBottom">@dimen/common_pad_m</item>
     </style>
 
-    <style name="common_pad_white" parent="@style/common_pad">
+    <style name="common_pad_m">
+        <item name="android:paddingLeft">@dimen/common_pad_m</item>
+        <item name="android:paddingRight">@dimen/common_pad_m</item>
+        <item name="android:paddingTop">@dimen/common_pad_m</item>
+        <item name="android:paddingBottom">@dimen/common_pad_m</item>
+    </style>
+
+    <style name="common_pad_s">
+        <item name="android:paddingLeft">@dimen/common_pad_s</item>
+        <item name="android:paddingRight">@dimen/common_pad_s</item>
+        <item name="android:paddingTop">@dimen/common_pad_s</item>
+        <item name="android:paddingBottom">@dimen/common_pad_s</item>
+    </style>
+
+    <style name="common_pad_white_b" parent="@style/common_pad">
         <item name="android:background">@color/white_pure</item>
     </style>
+
+    <style name="common_pad_white_m" parent="@style/common_pad_m">
+        <item name="android:background">@color/white_pure</item>
+    </style>
+
+    <style name="common_pad_white_s" parent="@style/common_pad_s">
+        <item name="android:background">@color/white_pure</item>
+    </style>
+
 
 </resources>

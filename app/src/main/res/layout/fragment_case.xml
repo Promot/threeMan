@@ -2,10 +2,13 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context="com.promote.threeman.main.TeacherFragment">
+             tools:context="com.promote.threeman.main.CaseFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ListView
+        android:id="@+id/frag_case_lv"
+        style="@style/common_pad_m"
+        android:dividerHeight="10dp"
+        android:divider="@android:color/transparent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />

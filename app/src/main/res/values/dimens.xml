@@ -4,6 +4,9 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="action_height">55dp</dimen>
     <dimen name="aciton_btn_width">60dp</dimen>
+    <dimen name="common_divid_m">10dp</dimen>
+
+    <dimen name="s_fillet_dimen">5dp</dimen>
 
     <!-- home -->
     <dimen name="tab_height">50dp</dimen>
@@ -13,6 +16,7 @@
     <dimen name="action_pad">10dp</dimen>
     <dimen name="action_search_pad_l_r">10dp</dimen>
     <dimen name="actino_search_radio">55dp</dimen>
+    <dimen name="hom_item_div">15dp</dimen>
     <!-- common_pad -->
     <dimen name="common_pad_b">15dp</dimen>
     <dimen name="common_pad_m">10dp</dimen>

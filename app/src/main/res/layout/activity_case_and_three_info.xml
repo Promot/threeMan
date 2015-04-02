@@ -1,0 +1,67 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/common_pad_m"
+            tools:context="com.promote.threeman.detailInfo.CaseAndThreeInfoActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            style="@style/common_pad_white_s"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/case_info_top_img"
+                android:layout_width="match_parent"
+                android:background="@color/red"
+                android:layout_height="150dp"/>
+        </FrameLayout>
+
+        <View
+            style="@style/divid_tyle_m"/>
+
+        <LinearLayout
+            android:id="@+id/case_info_mid_ll"
+            android:orientation="vertical"
+            style="@style/common_pad_white_m"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/case_info_title_tv"
+                style="@style/title2_b_font"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/case_info_time_time"
+                style="@style/nomal_grag_font"
+                android:layout_marginTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/divid_tyle_m"/>
+
+        <FrameLayout
+            style="@style/common_pad_white_m"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/case_info_btm_ll"
+                style="@style/nomal_b_font"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </FrameLayout>
+
+
+    </LinearLayout>
+</ScrollView>

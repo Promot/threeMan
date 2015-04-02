@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/hot_search_item_tv"
+          style="@style/subTitle_b_font"
+          android:paddingBottom="15dp"
+          android:paddingTop="15dp"
+          android:paddingRight="10dp"
+          android:paddingLeft="10dp"
+          android:background="@drawable/s_fillet_bg_sel"
+          android:textAlignment="center"
+          android:gravity="center"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"/>

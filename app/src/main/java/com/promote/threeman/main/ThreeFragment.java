@@ -98,7 +98,7 @@ public class ThreeFragment extends Fragment {
 
                     return ABOUT_LEADER;
                 }
-                case 7: {
+                case 0: {
                     return ABOUT_COMP;
                 }
                 default: {

@@ -2,7 +2,7 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
              android:orientation="vertical"
-             android:background="@color/divid_gray"
+             android:background="@color/bg_gray"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              tools:context=".Dialog.HomePop">
@@ -28,8 +28,22 @@
             >
 
             <TextView
+                android:id="@+id/pop_home_login_tv"
+                android:layout_weight="1"
+                style="@style/nomal_grag_font"
+                android:layout_width="0dp"
+                android:layout_margin="5dp"
+                android:text="@string/login"
+                android:gravity="center"
+                android:singleLine="true"
+                android:minWidth="60dp"
+                android:maxEms="5"
+                android:layout_height="wrap_content"/>
+
+            <TextView
                 android:id="@+id/pop_home_name_tv"
                 android:layout_weight="1"
+                android:visibility="gone"
                 style="@style/subTitle_b_b_font"
                 android:layout_width="0dp"
                 android:layout_margin="5dp"
@@ -45,17 +59,17 @@
                 android:layout_height="20dp"></View>
 
             <TextView
-                android:id="@+id/pop_home_unrgt_tv"
+                android:id="@+id/pop_home_regist_tv"
                 android:padding="5dp"
                 style="@style/nomal_grag_font"
-                android:text="@string/logout"
+                android:text="@string/rigest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
     </TableRow>
 
     <TableRow
-        android:id="@+id/pop_home_tv_tr"
+        android:id="@+id/pop_grow_tv_tr"
         style="@style/homepop_item"
         android:gravity="center_vertical"
         android:orientation="horizontal"
@@ -63,15 +77,54 @@
         >
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_menu_camera"/>
+            style="@style/menu_icon_size"
+            android:src="@mipmap/menu_grow_icon"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/subTitle_b_b_font"
-            android:text="@string/tv_center"/>
+            android:text="@string/my_grow"/>
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/pop_home_accout_tr"
+        style="@style/homepop_item"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1px"
+        >
+
+        <ImageView
+            style="@style/menu_icon_size"
+            android:src="@mipmap/menu_account_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/subTitle_b_b_font"
+            android:text="@string/accout"/>
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/pop_home_msg_tr"
+        style="@style/homepop_item"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1px"
+        >
+
+        <ImageView
+            style="@style/menu_icon_size"
+            android:src="@mipmap/menu_msg_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/subTitle_b_b_font"
+            android:text="@string/msg"/>
 
     </TableRow>
 
@@ -84,9 +137,8 @@
         >
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_menu_set_as"/>
+            style="@style/menu_icon_size"
+            android:src="@mipmap/menu_settings_icon"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -95,27 +147,5 @@
             android:text="@string/setting"/>
 
     </TableRow>
-
-    <TableRow
-        android:id="@+id/pop_home_gold_tr"
-        style="@style/homepop_item"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:layout_marginBottom="1px"
-        >
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_media_play"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/subTitle_b_b_font"
-            android:text="@string/gold"/>
-
-    </TableRow>
-
 
 </TableLayout>

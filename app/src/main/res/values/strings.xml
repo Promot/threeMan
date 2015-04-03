@@ -1,11 +1,13 @@
 <resources>
-    <string name="app_name">三身形</string>
+    <string name="app_name">三身行</string>
     <string name="search">搜索</string>
-    <string name="logout">注销</string>
-    <string name="login">登录</string>
-    <string name="tv_center">视频中心</string>
-    <string name="setting">设置</string>
-    <string name="gold">金币</string>
+    <string name="rigest">注 册</string>
+    <string name="logout">注 销</string>
+    <string name="login">登 录</string>
+    <string name="my_grow">我的成长</string>
+    <string name="msg">消 息</string>
+    <string name="accout">账 户</string>
+    <string name="setting">设 置</string>
 
     <string-array name="home_tabs">
         <item>首页</item>
@@ -32,6 +34,14 @@
     <string name="home_by_type">按行业</string>
     <string name="click_num">点击量</string>
 
+    <string name="info">详情</string>
     <string name="source_info">课程详情</string>
+    <string name="phone">手机号码</string>
+    <string name="pwd">密码</string>
+    <string name="forget_pwd">忘记密码？</string>
+    <string name="check_num">验证码验证</string>
+    <string name="usr_name">用户名</string>
+    <string name="register_deal">注册代表您同意《三身行用户协议》</string>
+    <string name="get_check">获取验证码</string>
 
 </resources>

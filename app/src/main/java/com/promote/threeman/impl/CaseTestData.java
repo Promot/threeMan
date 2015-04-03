@@ -17,6 +17,7 @@ public class CaseTestData {
             CaseFragBean caseFragBean = new CaseFragBean();
             caseFragBean.setImgUrl("茶色备案url" + i);
             caseFragBean.setClickNum(i + 100);
+            caseFragBean.setDate("2015.4.3");
             caseFragBean.setSubTitle("副标题，副标题，副标题，副标题，副标题，副标题，副标题，副标题，副标题，副标题");
             caseFragBean.setContent("内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" +
                     "副标题，副标题，副标题，副标题，副标题，副标题副标题，副标题，副标题，副标题，副标题，副标题副标题，副标题，副标题，副标题，副标题，副标题副标题，副标题，副标题，副标题，副标题，副标题副标题，副标题，副标题，副标题，副标题，副标题");

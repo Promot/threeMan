@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="white">#feeeee</color>
+    <color name="white">#F5F5F5</color>
     <color name="white_pure">#ffffff</color>
-    <color name="title_blue">#1E97D5</color>
+    <color name="title_blue">#1E99D5</color>
     <color name="sel_blue">#ADA7D5</color>
     <color name="divid_gray">#9B9B9B</color>
     <color name="bg_gray">#EEEDE9</color>

@@ -1,11 +1,13 @@
 package com.promote.threeman.bean;
 
+import android.os.Parcelable;
+
 /**
  * Created by ACER on 2015/4/2.
  * <p/>
  * 课程实体类， 基类。
  */
-public class SourceBean {
+public abstract class SourceBean implements Parcelable {
     /**
      * 图片url *
      */
@@ -24,6 +26,8 @@ public class SourceBean {
     protected String content;
 
     protected String subTitle;
+
+
 
     public String getImgUrl() {
         return imgUrl;
@@ -64,4 +68,6 @@ public class SourceBean {
     public void setSubTitle(String subTitle) {
         this.subTitle = subTitle;
     }
+
+
 }

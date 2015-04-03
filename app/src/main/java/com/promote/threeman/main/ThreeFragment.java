@@ -1,12 +1,14 @@
 package com.promote.threeman.main;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -14,6 +16,7 @@ import android.widget.TextView;
 
 import com.promote.threeman.R;
 import com.promote.threeman.bean.ThreeFragBean;
+import com.promote.threeman.detailInfo.CaseAndThreeInfoActivity;
 import com.promote.threeman.impl.ThreeTestData;
 
 import java.util.ArrayList;
@@ -21,7 +24,7 @@ import java.util.ArrayList;
 /**
  * 三身行fragment.
  */
-public class ThreeFragment extends Fragment {
+public class ThreeFragment extends Fragment implements AdapterView.OnItemClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -53,6 +56,15 @@ public class ThreeFragment extends Fragment {
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Intent intent = new Intent(getActivity(), CaseAndThreeInfoActivity.class);
+        intent.putExtra(CaseAndThreeInfoActivity.PARM_TYPEKEY, CaseAndThreeInfoActivity.THREEINFO);
+        intent.putExtra(CaseAndThreeInfoActivity.PARM_OBJKEY, threeFragBeans.get(position));
+        startActivity(intent);
+
     }
 
     /**
@@ -169,6 +181,7 @@ public class ThreeFragment extends Fragment {
     private void initialize(View view) {
         threeFragBeans = new ArrayList<>();
         threefraglv = (ListView) view.findViewById(R.id.three_frag_lv);
+        threefraglv.setOnItemClickListener(this);
 
         adapter = new MyAdapter();
         threefraglv.setAdapter(adapter);

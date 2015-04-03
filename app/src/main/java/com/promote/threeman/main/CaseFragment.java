@@ -129,6 +129,8 @@ public class CaseFragment extends Fragment implements AdapterView.OnItemClickLis
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Intent intent = new Intent(getActivity(), CaseAndThreeInfoActivity.class);
+        intent.putExtra(CaseAndThreeInfoActivity.PARM_TYPEKEY, CaseAndThreeInfoActivity.CASEINFO);
+        intent.putExtra(CaseAndThreeInfoActivity.PARM_OBJKEY, caseFragBeans.get(position));
         startActivity(intent);
     }
 

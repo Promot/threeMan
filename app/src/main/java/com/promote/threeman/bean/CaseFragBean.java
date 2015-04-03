@@ -1,12 +1,11 @@
 package com.promote.threeman.bean;
 
 import android.os.Parcel;
-import android.os.Parcelable;
 
 /**
  * Created by ACER on 2015/4/1.
  */
-public class CaseFragBean extends SourceBean implements Parcelable {
+public class CaseFragBean extends SourceBean implements android.os.Parcelable {
 
     private int clickNum;
 
@@ -46,7 +45,7 @@ public class CaseFragBean extends SourceBean implements Parcelable {
         this.subTitle = in.readString();
     }
 
-    public static final Parcelable.Creator<CaseFragBean> CREATOR = new Parcelable.Creator<CaseFragBean>() {
+    public static final Creator<CaseFragBean> CREATOR = new Creator<CaseFragBean>() {
         public CaseFragBean createFromParcel(Parcel source) {
             return new CaseFragBean(source);
         }

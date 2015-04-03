@@ -1,7 +1,6 @@
 package com.promote.threeman.bean;
 
 import android.os.Parcel;
-import android.os.Parcelable;
 
 import com.promote.threeman.main.ThreeFragment;
 
@@ -10,11 +9,10 @@ import com.promote.threeman.main.ThreeFragment;
  * <p/>
  * 首界面三身形实体类。
  */
-public class ThreeFragBean extends SourceBean implements Parcelable {
+public class ThreeFragBean extends SourceBean {
 
     private String title;
     private int type = ThreeFragment.ThreeType.ABOUT_PRO.getValue();      //默认值
-    private String content;
 
     public ThreeFragment.ThreeType getType() {
         return ThreeFragment.ThreeType.getThreeTypeByValue(type);
@@ -28,15 +26,6 @@ public class ThreeFragBean extends SourceBean implements Parcelable {
         this.type = type;
     }
 
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
     @Override
     public int describeContents() {
         return 0;
@@ -46,7 +35,6 @@ public class ThreeFragBean extends SourceBean implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.title);
         dest.writeInt(this.type);
-        dest.writeString(this.content);
         dest.writeString(this.imgUrl);
         dest.writeString(this.name);
         dest.writeString(this.date);
@@ -60,7 +48,6 @@ public class ThreeFragBean extends SourceBean implements Parcelable {
     private ThreeFragBean(Parcel in) {
         this.title = in.readString();
         this.type = in.readInt();
-        this.content = in.readString();
         this.imgUrl = in.readString();
         this.name = in.readString();
         this.date = in.readString();
@@ -68,7 +55,7 @@ public class ThreeFragBean extends SourceBean implements Parcelable {
         this.subTitle = in.readString();
     }
 
-    public static final Parcelable.Creator<ThreeFragBean> CREATOR = new Parcelable.Creator<ThreeFragBean>() {
+    public static final Creator<ThreeFragBean> CREATOR = new Creator<ThreeFragBean>() {
         public ThreeFragBean createFromParcel(Parcel source) {
             return new ThreeFragBean(source);
         }

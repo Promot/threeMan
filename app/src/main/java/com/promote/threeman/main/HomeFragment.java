@@ -1,6 +1,7 @@
 package com.promote.threeman.main;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -11,6 +12,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -18,6 +20,7 @@ import android.widget.TextView;
 import com.promote.jchlib.util.view.PagerIndicator;
 import com.promote.jchlib.util.view.ScrollGridView;
 import com.promote.threeman.R;
+import com.promote.threeman.detailInfo.VideoInfoActivity;
 import com.promote.threeman.impl.HomeTestData;
 
 import java.util.ArrayList;
@@ -124,6 +127,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
 
         eightTypeAdapter = new EightTypeAdapter();
         hometypegv.setAdapter(eightTypeAdapter);
+        hometypegv.setOnItemClickListener(new EightTypeOnItemclick());
 
         sixTypeAdapter = new SixTypeAdapter();
         home6type.setAdapter(sixTypeAdapter);
@@ -414,6 +418,19 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
 
 
             return convertView;
+        }
+    }
+
+    /**
+     * 八大类，单点。
+     */
+    private class EightTypeOnItemclick implements AdapterView.OnItemClickListener {
+
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            Intent intent = new Intent(getActivity(), VideoInfoActivity.class);
+            startActivity(intent);
         }
     }
 

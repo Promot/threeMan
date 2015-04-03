@@ -19,10 +19,12 @@ public class HomePop extends PopupWindow implements View.OnClickListener {
 
     private ImageView homepopimg;
     private TextView pophomenametv;
-    private TextView pophomeunrgttv;
-    private TableRow pophometvtr;
+    private TextView poplogintv;
+    private TextView pophomergttv;
+    private TableRow popgrowtvtr;
+    private TableRow pophomeaccouttr;
+    private TableRow pophomemsgtr;
     private TableRow pophomesettingtr;
-    private TableRow pophomegoldtr;
 
     public void setCallBack(HomePopCallBack callBack) {
         this.callBack = callBack;
@@ -30,8 +32,9 @@ public class HomePop extends PopupWindow implements View.OnClickListener {
 
     private HomePopCallBack callBack;
 
+
     public enum PopClickType {
-        HOME, LOGIN, LOGOUT, TV_CENTER, SETTING, GOLD;
+        HOME, LOGIN, LOGOUT, GROW, SETTING, ACCOUNT, MSG, REGISTER;
     }
 
     @Override
@@ -47,22 +50,34 @@ public class HomePop extends PopupWindow implements View.OnClickListener {
                 callBack.callBack(PopClickType.HOME);
                 break;
             }
-            case R.id.pop_home_unrgt_tv: {
-                callBack.callBack(PopClickType.LOGOUT);
+            case R.id.pop_home_regist_tv: {
+                callBack.callBack(PopClickType.REGISTER);
                 break;
             }
-            case R.id.pop_home_tv_tr: {
-                callBack.callBack(PopClickType.HOME);
+            case R.id.pop_grow_tv_tr: {
+                callBack.callBack(PopClickType.GROW);
                 break;
             }
             case R.id.pop_home_setting_tr: {
                 callBack.callBack(PopClickType.SETTING);
                 break;
             }
-            case R.id.pop_home_gold_tr: {
-                callBack.callBack(PopClickType.GOLD);
+
+            case R.id.pop_home_accout_tr: {
+                callBack.callBack(PopClickType.ACCOUNT);
                 break;
             }
+
+            case R.id.pop_home_msg_tr: {
+                callBack.callBack(PopClickType.MSG);
+                break;
+            }
+
+            case R.id.pop_home_login_tv: {
+                callBack.callBack(PopClickType.LOGIN);
+                break;
+            }
+
 
         }
         dismiss();
@@ -72,17 +87,22 @@ public class HomePop extends PopupWindow implements View.OnClickListener {
     private void initialize(View view) {
         homepopimg = (ImageView) view.findViewById(R.id.homepop_img);
         pophomenametv = (TextView) view.findViewById(R.id.pop_home_name_tv);
-        pophomeunrgttv = (TextView) view.findViewById(R.id.pop_home_unrgt_tv);
-        pophometvtr = (TableRow) view.findViewById(R.id.pop_home_tv_tr);
+        pophomergttv = (TextView) view.findViewById(R.id.pop_home_regist_tv);
+        poplogintv = (TextView) view.findViewById(R.id.pop_home_login_tv);
         pophomesettingtr = (TableRow) view.findViewById(R.id.pop_home_setting_tr);
-        pophomegoldtr = (TableRow) view.findViewById(R.id.pop_home_gold_tr);
+        popgrowtvtr = (TableRow) view.findViewById(R.id.pop_grow_tv_tr);
+        pophomeaccouttr = (TableRow) view.findViewById(R.id.pop_home_accout_tr);
+        pophomemsgtr = (TableRow) view.findViewById(R.id.pop_home_msg_tr);
 
         homepopimg.setOnClickListener(this);
         pophomenametv.setOnClickListener(this);
-        pophomeunrgttv.setOnClickListener(this);
-        pophometvtr.setOnClickListener(this);
+        pophomergttv.setOnClickListener(this);
         pophomesettingtr.setOnClickListener(this);
-        pophomegoldtr.setOnClickListener(this);
+        popgrowtvtr.setOnClickListener(this);
+        pophomeaccouttr.setOnClickListener(this);
+        pophomemsgtr.setOnClickListener(this);
+        poplogintv.setOnClickListener(this);
+
     }
 
     /**

@@ -56,7 +56,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/case_info_btm_ll"
+                android:id="@+id/case_info_btm_tv"
                 style="@style/nomal_b_font"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>

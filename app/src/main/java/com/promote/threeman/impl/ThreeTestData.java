@@ -17,6 +17,7 @@ public class ThreeTestData {
 
             ThreeFragBean threeFrag = new ThreeFragBean();
             threeFrag.setName("标题企业 " + i);
+            threeFrag.setDate("2015.4.3");
             threeFrag.setSubTitle("，副标题，副标题，副标题副标题，副标题，副标题，副，副标题，副标题，副标题副标题，副标题，副标题，副，副标题，副标题，副标题副标题，副标题，副标题，副");
             threeFrag.setContent("企业 " + i +
                     "内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" +

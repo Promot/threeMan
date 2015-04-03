@@ -1,16 +1,68 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/common_pad_m"
+            tools:context="com.promote.threeman.detailInfo.VideoInfoActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            style="@style/common_pad_white_s"
+            android:layout_width="match_parent"
+            android:layout_height="160dp">
+
+            <WebView
+                android:id="@+id/video_info_top_img"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                tools:context="com.promote.threeman.detailInfo.VideoInfoActivity">
+                android:background="@color/red"
+                android:layout_height="150dp"/>
+        </FrameLayout>
 
-    <TextView
-        android:text="@string/app_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <View
+            style="@style/divid_tyle_m"/>
 
-</RelativeLayout>
+        <LinearLayout
+            android:id="@+id/video_info_mid_ll"
+            android:orientation="vertical"
+            style="@style/common_pad_white_m"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/video_info_title_tv"
+                style="@style/title2_b_font"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/video_info_time_time"
+                style="@style/nomal_grag_font"
+                android:layout_marginTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/divid_tyle_m"/>
+
+        <FrameLayout
+            style="@style/common_pad_white_m"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/video_info_btm_tv"
+                style="@style/nomal_b_font"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

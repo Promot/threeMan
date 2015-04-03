@@ -8,6 +8,11 @@
         <item name="android:background">@drawable/menu_item_bg_sel</item>
     </style>
 
+    <style name="menu_icon_size">
+        <item name="android:layout_height">@dimen/menu_icon_w_h</item>
+        <item name="android:layout_width">@dimen/menu_icon_w_h</item>
+    </style>
+
     <!--<View
             android:layout_width="match_parent"
             android:layout_height="@dimen/hom_item_div"/>-->
@@ -21,6 +26,18 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1px</item>
         <item name="android:background">@color/divid_gray</item>
+    </style>
+
+    <!--android:id="@+id/login_phone"
+        android:drawableLeft="@mipmap/phone"
+        android:layout_width="match_parent"
+        android:hint="@string/phone"
+        android:layout_height="wrap_content"-->
+
+    <style name="login_et_style" parent="nomal_b_font">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
 </resources>

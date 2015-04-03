@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/register_phone"
+        android:drawableLeft="@mipmap/phone"
+        android:hint="@string/phone"
+        style="@style/login_et_style"
+        />
+
+    <EditText
+        android:id="@+id/register_pwd"
+        android:hint="@string/usr_name"
+        android:layout_marginTop="5dp"
+        android:drawableLeft="@mipmap/urs_name"
+        style="@style/login_et_style"/>
+
+    <EditText
+        android:id="@+id/register_name"
+        android:hint="@string/pwd"
+        android:layout_marginTop="5dp"
+        android:drawableLeft="@mipmap/dialog_pwd"
+        style="@style/login_et_style"/>
+
+    <TextView
+        android:id="@+id/register_deal"
+        style="@style/nomal_b_font"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/dialog_get_check_btn"
+        android:text="@string/get_check"
+        style="@style/title2_w_font_b"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/blue_btn_shape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

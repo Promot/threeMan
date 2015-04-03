@@ -7,14 +7,21 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.promote.threeman.Dialog.FindPwdDialog;
 import com.promote.threeman.Dialog.HomePop;
+import com.promote.threeman.Dialog.LoginTDialog;
+import com.promote.threeman.Dialog.RegisterTDialog;
+import com.promote.threeman.Dialog.ThreeLoginDialog;
 import com.promote.threeman.R;
 import com.promote.threeman.base.BaseActivity;
+import com.promote.threeman.detailInfo.CaseAndThreeInfoActivity;
+import com.promote.threeman.impl.MsgTestData;
 import com.promote.threeman.search.SearchActivity;
 import com.promote.threeman.util.LogCat;
 
@@ -31,8 +38,8 @@ public abstract class HomeActionBarActivity extends BaseActivity implements Home
 
     private ImageButton homeactionicon;
     private TextView homeactiontitletv;
-    private ImageButton homeactionmenu;
-    private ImageButton homeactionsearch;
+    private ImageView homeactionmenu;
+    private ImageView homeactionsearch;
     private ImageButton homeBackBtn;
     private LinearLayout homeLeftLl;
     private RelativeLayout homeRightRl;
@@ -57,7 +64,6 @@ public abstract class HomeActionBarActivity extends BaseActivity implements Home
     }
 
     private class MyOnclickListener implements View.OnClickListener {
-
 
         @Override
         public void onClick(View v) {
@@ -103,8 +109,8 @@ public abstract class HomeActionBarActivity extends BaseActivity implements Home
 
         homeactionicon = (ImageButton) view.findViewById(R.id.home_action_icon);
         homeactiontitletv = (TextView) view.findViewById(R.id.home_action_title_tv);
-        homeactionmenu = (ImageButton) view.findViewById(R.id.home_action_menu);
-        homeactionsearch = (ImageButton) view.findViewById(R.id.home_action_search);
+        homeactionmenu = (ImageView) view.findViewById(R.id.home_action_menu);
+        homeactionsearch = (ImageView) view.findViewById(R.id.home_action_search);
         homeBackBtn = (ImageButton) view.findViewById(R.id.action_back_ib);
         homeLeftLl = (LinearLayout) view.findViewById(R.id.home_left_ll);
         homeRightRl = (RelativeLayout) view.findViewById(R.id.actionbar_r_rl);
@@ -166,12 +172,12 @@ public abstract class HomeActionBarActivity extends BaseActivity implements Home
      *
      * @param btn
      */
-    public void addRightBtn(ImageButton btn) {
+    public void addRightBtn(View btn) {
 
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams
                 .WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);
         btn.setLayoutParams(params);
-        params.addRule(RelativeLayout.RIGHT_OF, R.id.home_action_search);       //居搜索按钮左。
+        params.addRule(RelativeLayout.LEFT_OF, R.id.home_action_search);       //居搜索按钮左。
         homeRightRl.addView(btn);
 
     }
@@ -189,26 +195,37 @@ public abstract class HomeActionBarActivity extends BaseActivity implements Home
             }
             case LOGIN: {
                 LogCat.d("login");
+                showLogin();
                 break;
             }
-            case LOGOUT: {
+            case REGISTER: {
 
-                LogCat.d("logout ");
+                showRegister();
                 break;
             }
-            case TV_CENTER: {
-                LogCat.d("tv center ");
+            case GROW: {
+                LogCat.d("grow ");
                 break;
             }
             case SETTING: {
                 LogCat.d("setting ");
                 break;
             }
-            case GOLD: {
-                LogCat.d("gold ");
+            case ACCOUNT: {
+                LogCat.d("account ");
                 break;
             }
+            case MSG: {
+                LogCat.d("msg ");
 
+                Intent intent = new Intent(HomeActionBarActivity.this,
+                        CaseAndThreeInfoActivity.class);
+                intent.putExtra(CaseAndThreeInfoActivity.PARM_TYPEKEY, CaseAndThreeInfoActivity.MSGINFO);
+                intent.putExtra(CaseAndThreeInfoActivity.PARM_OBJKEY, MsgTestData.getMsgTestData());
+                startActivity(intent);
+
+                break;
+            }
 
         }
 
@@ -259,6 +276,67 @@ public abstract class HomeActionBarActivity extends BaseActivity implements Home
                 }
             }
         });
+
+    }
+
+    /**
+     * 登录对话框。
+     */
+    private void showLogin() {
+        ThreeLoginDialog.Builder builder = new ThreeLoginDialog.Builder();
+        LoginTDialog dialog = (LoginTDialog) builder.create(LoginTDialog.create(this));
+        dialog.setOwnerActivity(this);
+        dialog.show();
+        dialog.setOnLoginClickListener(new LoginTDialog.OnLoginClickListener() {
+            @Override
+            public void onLoginClick(View view) {
+
+            }
+
+            @Override
+            public void onForgetClick(View view) {
+                showFindPwd();
+            }
+        });
+    }
+
+    /**
+     * 找回密码。
+     */
+    private void showFindPwd() {
+
+        ThreeLoginDialog.Builder builder = new ThreeLoginDialog.Builder();
+        FindPwdDialog findPwdDialog = (FindPwdDialog) builder.create(FindPwdDialog.create(this));
+        findPwdDialog.setOwnerActivity(this);
+        findPwdDialog.show();
+        findPwdDialog.setOnCheckNumClickListener(new FindPwdDialog.OnCheckNumClickListener() {
+            @Override
+            public void onCheckNumClick(View view) {
+
+            }
+        });
+
+
+    }
+
+    private void showRegister() {
+
+        ThreeLoginDialog.Builder builder = new ThreeLoginDialog.Builder();
+        RegisterTDialog dialog = (RegisterTDialog) builder.create(RegisterTDialog.create(this));
+        dialog.setOwnerActivity(this);
+        dialog.show();
+        dialog.setOnRigesterClickListener(new RegisterTDialog.OnRigesterClickListener() {
+            @Override
+            public void onGetCheckNumClick(View view) {
+
+            }
+
+            @Override
+            public void onShowDealClick(View view) {
+
+            }
+        });
+
 
     }
 

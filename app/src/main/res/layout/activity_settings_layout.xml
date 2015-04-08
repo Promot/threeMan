@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            style="@style/common_pad_m"
+            android:background="@color/bg_gray"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_marginTop="1px"
+                android:id="@+id/set_pwd_tr"
+                style="@style/set_tr_style">
+
+                <TextView
+                    style="@style/set_tv_w_style"
+                    android:text="@string/set_pwd"
+                    />
+
+                <ImageView
+                    style="@style/set_img_style"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="1px"
+                android:id="@+id/set_feed_tr"
+                style="@style/set_tr_style">
+
+                <TextView
+                    style="@style/set_tv_w_style"
+                    android:text="@string/set_feed"
+                    />
+
+                <ImageView
+                    style="@style/set_img_style"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="1px"
+                android:id="@+id/set_about"
+                style="@style/set_tr_style">
+
+                <TextView
+                    style="@style/set_tv_w_style"
+                    android:text="@string/set_about"
+                    />
+
+                <ImageView
+                    style="@style/set_img_style"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/set_des"
+                android:layout_marginTop="1px"
+                style="@style/set_tr_style">
+
+                <TextView
+                    style="@style/set_tv_w_style"
+                    android:text="@string/set_des"
+                    />
+
+                <ImageView
+                    style="@style/set_img_style"/>
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_marginTop="1px"
+                style="@style/set_tr_style">
+
+                <TextView
+                    style="@style/set_tv_w_style"
+                    android:text="@string/set_wifi"
+                    />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/set_wifi_cb"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_width="wrap_content"
+                        android:button="@drawable/set_check_sel"
+                        android:layout_height="wrap_content"/>
+                </FrameLayout>
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/set_check"
+                android:layout_marginTop="1px"
+                style="@style/set_tr_style">
+
+                <TextView
+                    style="@style/set_tv_w_style"
+                    android:text="@string/set_check"
+                    />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_gravity="end"
+                        style="@style/set_img_style"/>
+                </FrameLayout>
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="1px"
+                style="@style/set_tr_style">
+
+                <TextView
+                    style="@style/set_tv_w_style"
+                    android:text="@string/set_path"
+                    />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/set_save_local_img"
+                        android:layout_width="30dp"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/set_sel_save"
+                        android:layout_height="30dp"/>
+
+                    <TextView
+                        android:id="@+id/set_save_local_tv"
+                        style="@style/subTitle_b_font"
+                        android:layout_marginLeft="5dp"
+                        android:maxLength="6"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:text="@string/set_savelocal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/set_logout_btn"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/blue_btn_shape"
+            android:layout_width="match_parent"
+            style="@style/title2_w_font_b"
+            android:text="@string/set_logout"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</ScrollView>

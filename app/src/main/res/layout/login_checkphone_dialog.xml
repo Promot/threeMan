@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        style="@style/common_pad_m"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/nomal_grag_font"
+            android:layout_marginRight="5dp"
+            android:text="@string/your_phone"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/check_phone_tv"
+            style="@style/login_et_style"
+            android:text="15005164436"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="@dimen/common_pad_b"
+        android:layout_width="wrap_content"
+        android:text="@string/check_title"
+        style="@style/nomal_grag_font"
+        android:layout_marginLeft="@dimen/common_pad_m"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/common_pad_b"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/common_pad_m"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/check_phone_et"
+            android:drawableLeft="@mipmap/check_num_icon"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            style="@style/login_et_style"
+            android:hint="@string/check_num"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/send_check"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            style="@style/nomal_b_font"
+            android:layout_marginRight="5dp"
+            android:text="@string/send_check"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/check_dc_tv"
+            android:text="(25)"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/check_ok_btn"
+        style="@style/title2_w_font_b"
+        android:text="@string/ok"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/blue_btn_shape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

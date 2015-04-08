@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentActivity;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.promote.threeman.R;
@@ -26,12 +27,14 @@ public abstract class BaseActivity extends FragmentActivity {
         View actionBar = addActionBarView();        //添加actionBar.
         if (actionBar == null)
             throw new NullPointerException("BaseActivity actionBarView is null");
-        contentLayout.addView(actionBar);
+        contentLayout.addView(actionBar, ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
 
         contentView = addContentView();             //添加contentView.
         if (contentView == null)
             throw new NullPointerException("BaseActivity contentview is null");
-        contentLayout.addView(contentView);
+        contentLayout.addView(contentView, ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT);
     }
 
     protected void back() {

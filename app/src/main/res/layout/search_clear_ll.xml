@@ -9,7 +9,7 @@
         android:layout_gravity="center"
         android:id="@+id/clear_history_tv"
         android:padding="@dimen/common_pad_m"
-        style="@style/subTitle_green_font"
+        style="@style/subTitle_blue_font"
         android:layout_width="wrap_content"
         android:text="@string/clear_history"
         android:layout_height="wrap_content"/>

@@ -21,6 +21,13 @@
         <item name="android:paddingBottom">@dimen/common_pad_s</item>
     </style>
 
+    <style name="common_pad_b_height">
+        <item name="android:paddingLeft">@dimen/common_pad_b</item>
+        <item name="android:paddingRight">@dimen/common_pad_b</item>
+        <item name="android:paddingTop">@dimen/common_pad_b_h</item>
+        <item name="android:paddingBottom">@dimen/common_pad_b_h</item>
+    </style>
+
     <style name="common_pad_white_b" parent="@style/common_pad">
         <item name="android:background">@color/white_pure</item>
     </style>
@@ -33,5 +40,9 @@
         <item name="android:background">@color/white_pure</item>
     </style>
 
+    <style name="common_pad_white_b_h"
+           parent="@style/common_pad_b_height">
+        <item name="android:background">@color/white_pure</item>
+    </style>
 
 </resources>

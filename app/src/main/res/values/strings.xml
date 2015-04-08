@@ -8,6 +8,8 @@
     <string name="msg">消 息</string>
     <string name="accout">账 户</string>
     <string name="setting">设 置</string>
+    <string name="ok">确定</string>
+    <string name="yuan">元</string>
 
     <string-array name="home_tabs">
         <item>首页</item>
@@ -39,9 +41,51 @@
     <string name="phone">手机号码</string>
     <string name="pwd">密码</string>
     <string name="forget_pwd">忘记密码？</string>
-    <string name="check_num">验证码验证</string>
+    <string name="check_num_check">验证码验证</string>
     <string name="usr_name">用户名</string>
     <string name="register_deal">注册代表您同意《三身行用户协议》</string>
     <string name="get_check">获取验证码</string>
+    <string name="your_phone">你的手机</string>
+    <string name="check_title">将会收到一条验证码短信，请注意查收</string>
+    <string name="check_num">验证码</string>
+    <string name="send_check">发送验证码</string>
+
+    <string name="account_beans">蜕变豆</string>
+    <string name="account_beans_current">当前蜕变豆余额：</string>
+    <string name="account_beans_remainder">剩余蜕变豆：</string>
+    <string name="account_input_zfb">请输入支付宝账号</string>
+    <string name="account_input_recharge">请输入充值数量（1元=1蜕变豆）</string>
+    <string name="account_input_deposit">请输入提现金额（2蜕变豆=1元）</string>
+    <string name="account_deposit">提现</string>
+    <string name="account_charge">充值</string>
+
+    <string name="account_zfb_deposit">支付宝提现：</string>
+    <string name="account_zfb_deposit_btn">支付宝提现</string>
+    <string name="account_afb_pay">支付宝付款：</string>
+    <string name="account_afb_charge">支付宝充值</string>
+
+    <string name="set_pwd">修改密码</string>
+    <string name="set_feed">意见反馈</string>
+    <string name="set_about">关于三身行</string>
+    <string name="set_des">操作指南</string>
+    <string name="set_wifi">应许非WIFI网络下载</string>
+    <string name="set_check">检查跟新</string>
+    <string name="set_path">下载存放路径</string>
+    <string name="set_savelocal">本机存储</string>
+    <string name="set_save_mount">外置储存</string>
+    <string name="set_logout">注销登录</string>
+
+    <string name="old_pwd">原密码</string>
+    <string name="new_pwd">新密码</string>
+    <string name="modify_pwd">修改密码</string>
+
+    <string name="feedback_hint">请输入您对我们的宝贵意见！</string>
+    <string name="sub_feedback">提交反馈</string>
+    <string name="about_us">关于我们</string>
+    <string name="email">邮箱:</string>
+    <string name="fax">传真：</string>
+    <string name="phone_line">电话联系请周一至周五工作日内联系</string>
+    <string name="about_njsx">南京三身行</string>
+    <string name="content_us">联系我们：</string>
 
 </resources>

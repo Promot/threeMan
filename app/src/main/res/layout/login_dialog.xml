@@ -4,7 +4,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-<EditText
+    <EditText
         android:id="@+id/login_phone"
         android:drawableLeft="@mipmap/phone"
         android:hint="@string/phone"

@@ -94,6 +94,7 @@ public class RegisterTDialog extends ThreeLoginDialog implements View.OnClickLis
         @Override
         public void onClick(View widget) {
             LogCat.d("-----阅读协议。-----");
+            onRigesterClickListener.onShowDealClick(widget);
         }
 
         @Override
@@ -109,9 +110,12 @@ public class RegisterTDialog extends ThreeLoginDialog implements View.OnClickLis
 
         switch (v.getId()) {
             case R.id.dialog_get_check_btn: {
-
+                if (onRigesterClickListener != null)
+                    onRigesterClickListener.onGetCheckNumClick(v);
+                dismiss();
                 break;
             }
+
         }
     }
 

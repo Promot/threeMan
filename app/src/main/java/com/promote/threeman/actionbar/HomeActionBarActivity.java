@@ -13,6 +13,7 @@ import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.promote.threeman.Dialog.CheckPhoneDialog;
 import com.promote.threeman.Dialog.FindPwdDialog;
 import com.promote.threeman.Dialog.HomePop;
 import com.promote.threeman.Dialog.LoginTDialog;
@@ -20,8 +21,10 @@ import com.promote.threeman.Dialog.RegisterTDialog;
 import com.promote.threeman.Dialog.ThreeLoginDialog;
 import com.promote.threeman.R;
 import com.promote.threeman.base.BaseActivity;
-import com.promote.threeman.detailInfo.CaseAndThreeInfoActivity;
-import com.promote.threeman.impl.MsgTestData;
+import com.promote.threeman.impl.BeansTestData;
+import com.promote.threeman.main.Account.FirmBeanActivity;
+import com.promote.threeman.main.msg.MsgListActivity;
+import com.promote.threeman.main.settings.SettingsActivity;
 import com.promote.threeman.search.SearchActivity;
 import com.promote.threeman.util.LogCat;
 
@@ -71,6 +74,7 @@ public abstract class HomeActionBarActivity extends BaseActivity implements Home
             switch (id) {
 
                 case R.id.home_action_icon: {
+
 
                     break;
                 }
@@ -209,9 +213,18 @@ public abstract class HomeActionBarActivity extends BaseActivity implements Home
             }
             case SETTING: {
                 LogCat.d("setting ");
+
+                Intent intent = new Intent(HomeActionBarActivity.this, SettingsActivity.class);
+                startActivity(intent);
+                LogCat.d("account ");
+
                 break;
             }
             case ACCOUNT: {
+
+                Intent intent = new Intent(HomeActionBarActivity.this, FirmBeanActivity.class);
+                intent.putExtra(FirmBeanActivity.URSERTYPE_KEY, BeansTestData.accountType);
+                startActivity(intent);
                 LogCat.d("account ");
                 break;
             }
@@ -219,9 +232,7 @@ public abstract class HomeActionBarActivity extends BaseActivity implements Home
                 LogCat.d("msg ");
 
                 Intent intent = new Intent(HomeActionBarActivity.this,
-                        CaseAndThreeInfoActivity.class);
-                intent.putExtra(CaseAndThreeInfoActivity.PARM_TYPEKEY, CaseAndThreeInfoActivity.MSGINFO);
-                intent.putExtra(CaseAndThreeInfoActivity.PARM_OBJKEY, MsgTestData.getMsgTestData());
+                        MsgListActivity.class);
                 startActivity(intent);
 
                 break;
@@ -319,6 +330,9 @@ public abstract class HomeActionBarActivity extends BaseActivity implements Home
 
     }
 
+    /**
+     * 显示注册。
+     */
     private void showRegister() {
 
         ThreeLoginDialog.Builder builder = new ThreeLoginDialog.Builder();
@@ -328,7 +342,7 @@ public abstract class HomeActionBarActivity extends BaseActivity implements Home
         dialog.setOnRigesterClickListener(new RegisterTDialog.OnRigesterClickListener() {
             @Override
             public void onGetCheckNumClick(View view) {
-
+                getCheckNum();
             }
 
             @Override
@@ -337,6 +351,23 @@ public abstract class HomeActionBarActivity extends BaseActivity implements Home
             }
         });
 
+    }
+
+    /**
+     * 获取验证码。
+     */
+    private void getCheckNum() {
+
+        CheckPhoneDialog.Builder builder = new CheckPhoneDialog.Builder();
+        CheckPhoneDialog dialog = (CheckPhoneDialog) builder.create(CheckPhoneDialog.create(this));
+        dialog.setOwnerActivity(this);
+        dialog.show();
+        dialog.setCheckPhoneIf(new CheckPhoneDialog.CheckPhoneIf() {
+            @Override
+            public void onOkClick(View view) {
+
+            }
+        });
 
     }
 

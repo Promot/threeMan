@@ -5,27 +5,32 @@
               android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/find_pwd_phone"
+        android:id="@+id/set_pwd_phone"
         android:drawableLeft="@mipmap/phone"
         android:hint="@string/phone"
         style="@style/login_et_style"
         />
 
     <EditText
-        android:id="@+id/find_pwd_pwd"
-        android:hint="@string/pwd"
+        android:id="@+id/set_pwd_old"
+        android:hint="@string/old_pwd"
+        android:layout_marginTop="5dp"
+        android:drawableLeft="@mipmap/dialog_pwd"
+        style="@style/login_et_style"/>
+
+    <EditText
+        android:id="@+id/set_pwd_new"
+        android:hint="@string/new_pwd"
         android:layout_marginTop="5dp"
         android:drawableLeft="@mipmap/dialog_pwd"
         style="@style/login_et_style"/>
 
     <Button
-        android:id="@+id/find_pwd_check"
-        android:text="@string/check_num_check"
+        android:id="@+id/set_modify_btn"
         style="@style/title2_w_font_b"
-        android:layout_marginTop="25dp"
+        android:text="@string/modify_pwd"
+        android:layout_marginTop="20dp"
         android:background="@drawable/blue_btn_shape"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
-
 </LinearLayout>

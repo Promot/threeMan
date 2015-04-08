@@ -24,9 +24,11 @@
                 android:id="@+id/home_action_icon"
                 android:src="@mipmap/logo"
                 android:scaleType="centerInside"
-                android:layout_marginLeft="10dp"
-                android:background="@android:color/transparent"
-                android:layout_width="@dimen/aciton_btn_width"
+                android:background="@null"
+                android:paddingTop="@dimen/common_pad_s"
+                android:paddingLeft="10dp"
+                android:paddingBottom="@dimen/common_pad_s"
+                android:layout_width="@dimen/log_btn_width"
                 android:layout_height="match_parent"/>
 
             <ImageButton

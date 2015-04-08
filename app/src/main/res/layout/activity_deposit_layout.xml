@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              style="@style/common_pad_m"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        style="@style/common_pad_white_b_h"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/account_name_tv"
+            style="@style/nomal_b_font"
+            android:layout_alignParentRight="true"
+            android:text="洒发范德萨范德萨范德萨发"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/account_no_tv"
+            style="@style/nomal_b_font"
+            android:text="发达冯绍峰发的撒飞"
+            android:layout_alignParentLeft="true"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_toLeftOf="@id/account_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="1px"
+        android:layout_width="match_parent"
+        style="@style/common_pad_white_m"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/nomal_grag_font"
+            android:text="@string/account_beans_remainder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/accont_beans_num"
+            android:text="25"
+            style="@style/nomal_grag_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/account_input_zfb_et"
+        android:hint="@string/account_input_zfb"
+        style="@style/subTitle_gray1_font"
+        android:paddingLeft="@dimen/common_pad_m"
+        android:paddingRight="@dimen/common_pad_m"
+        android:paddingTop="@dimen/common_pad_b"
+        android:paddingBottom="@dimen/common_pad_b"
+        android:background="@color/white_pure"
+        android:layout_marginTop="1px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/account_input_num_et"
+        android:hint="@string/account_input_deposit"
+        style="@style/subTitle_gray1_font"
+        android:paddingLeft="@dimen/common_pad_m"
+        android:paddingRight="@dimen/common_pad_m"
+        android:paddingTop="@dimen/common_pad_b"
+        android:paddingBottom="@dimen/common_pad_b"
+        android:background="@color/white_pure"
+        android:layout_marginTop="1px"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:paddingLeft="@dimen/common_pad_m"
+            android:text="@string/account_zfb_deposit"
+            style="@style/nomal_b_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/account_deposit_num_tv"
+            style="@style/nomal_blue_font"
+            android:text="0.23"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            style="@style/nomal_blue_font"
+            android:text="@string/yuan"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/account_deposit_btn"
+        android:background="@drawable/blue_btn_shape"
+        style="@style/title2_w_font_b"
+        android:layout_marginTop="@dimen/common_pad_b_h"
+        android:text="@string/account_zfb_deposit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

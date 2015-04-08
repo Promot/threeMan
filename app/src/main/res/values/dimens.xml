@@ -4,6 +4,7 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="action_height">55dp</dimen>
     <dimen name="aciton_btn_width">60dp</dimen>
+    <dimen name="log_btn_width">100dp</dimen>
     <dimen name="common_divid_m">10dp</dimen>
 
     <dimen name="s_fillet_dimen">5dp</dimen>
@@ -20,9 +21,12 @@
     <dimen name="actino_search_radio">55dp</dimen>
     <dimen name="hom_item_div">15dp</dimen>
     <!-- common_pad -->
+    <dimen name="common_pad_b_h">20dp</dimen>
     <dimen name="common_pad_b">15dp</dimen>
     <dimen name="common_pad_m">10dp</dimen>
     <dimen name="common_pad_s">5dp</dimen>
+
+    <dimen name="common_item_img_size">50dp</dimen>
 
     <!-- search -->
     <dimen name="search_icon_size">30dp</dimen>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:padding="@dimen/common_pad_b"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="30dp">
+
+        <ImageView
+            android:src="@mipmap/about_logo"
+            android:scaleType="centerInside"
+            android:layout_width="70dp"
+            android:layout_height="70dp"/>
+
+        <TextView
+            android:id="@+id/about_name_tv"
+            style="@style/subTitle_b_font"
+            android:layout_marginTop="10dp"
+            android:text="@string/about_njsx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/about_version_tv"
+            style="@style/subTitle_b_font"
+            android:layout_marginTop="10dp"
+            android:text="1.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+        style="@style/subTitle_gray1_font"
+        android:padding="@dimen/common_pad_m"
+        android:text="@string/content_us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_marginTop="1px"
+            style="@style/set_tr_style">
+
+            <TextView
+                style="@style/set_tv_style"
+                android:text="@string/email"
+                />
+
+            <TextView
+                android:text="fdsfs"
+                android:id="@+id/about_email_tv"
+                style="@style/set_tv_w_style"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="1px"
+            style="@style/set_tr_style">
+
+            <TextView
+                style="@style/set_tv_style"
+                android:text="@string/fax"
+                />
+
+            <TextView
+                android:text="fds"
+                android:id="@+id/about_fax"
+                style="@style/set_tv_style"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="1px"
+            style="@style/set_tr_style">
+
+            <TextView
+                android:layout_span="2"
+                style="@style/set_tv_w_style"
+                android:text="@string/phone_line"
+                />
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

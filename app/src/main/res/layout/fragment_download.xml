@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.promote.threeman.main.grow.DownloadFrag">
+
+
+    <ExpandableListView
+        android:id="@+id/download_elv"
+        android:layout_width="match_parent"
+        android:divider="@android:color/transparent"
+        android:childDivider="@android:color/transparent"
+        android:dividerHeight="@dimen/common_pad_m"
+        android:padding="@dimen/common_pad_m"
+        android:groupIndicator="@null"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"></ExpandableListView>
+
+    <include layout="@layout/vediocenter_btm_layout"/>
+</LinearLayout>

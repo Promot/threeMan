@@ -28,7 +28,6 @@ public abstract class SourceBean implements Parcelable {
     protected String subTitle;
 
 
-
     public String getImgUrl() {
         return imgUrl;
     }

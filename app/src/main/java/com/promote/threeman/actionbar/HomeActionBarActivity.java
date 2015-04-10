@@ -23,6 +23,7 @@ import com.promote.threeman.R;
 import com.promote.threeman.base.BaseActivity;
 import com.promote.threeman.impl.BeansTestData;
 import com.promote.threeman.main.Account.FirmBeanActivity;
+import com.promote.threeman.main.grow.VedioCenterActivity;
 import com.promote.threeman.main.msg.MsgListActivity;
 import com.promote.threeman.main.settings.SettingsActivity;
 import com.promote.threeman.search.SearchActivity;
@@ -208,6 +209,10 @@ public abstract class HomeActionBarActivity extends BaseActivity implements Home
                 break;
             }
             case GROW: {
+
+                Intent intent = new Intent(HomeActionBarActivity.this, VedioCenterActivity.class);
+                startActivity(intent);
+
                 LogCat.d("grow ");
                 break;
             }
@@ -269,13 +274,6 @@ public abstract class HomeActionBarActivity extends BaseActivity implements Home
         homePop.setTouchInterceptor(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-
-//                LogCat.d("event.getRawX()--: " + event.getRawX() + "homeActionMenu left--:" +
-//                        homeactionmenu
-//                                .getLeft() + " homeactionmenu.getRight():--" + homeactionmenu
-//                        .getRight() + "event.getRawX()--:" + event.getRawY() + "homeactionmenu--:" +
-//                        "                        .getTop()--:" + homeactionmenu
-//                        .getTop() + "homeactionmenu.getBottom()--:" + homeactionmenu.getBottom());
 
                 if (event.getRawX() < homeactionmenu.getLeft() || event.getRawX() > homeactionmenu
                         .getRight() || event.getRawY() < homeactionmenu

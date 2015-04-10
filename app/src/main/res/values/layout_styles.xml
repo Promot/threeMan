@@ -57,7 +57,6 @@
     </style>
 
     <style name="set_tv_w_style" parent="set_tv_style">
-
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1</item>
@@ -69,6 +68,11 @@
         <item name="android:layout_height">17dp</item>
         <item name="android:scaleType">centerInside</item>
         <item name="android:src">@mipmap/next_icon</item>
+    </style>
+
+    <style name="item_img_b_size">
+        <item name="android:layout_width">110dp</item>
+        <item name="android:layout_height">60dp</item>
     </style>
 
 </resources>

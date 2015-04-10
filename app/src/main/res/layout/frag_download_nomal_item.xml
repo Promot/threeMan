@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:animateLayoutChanges="true"
+              android:animationCache="true"
+              android:gravity="center_vertical"
+              android:layout_height="wrap_content">
+
+    <CheckBox
+        android:id="@+id/download_nomal_cb"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        style="@style/common_pad_white_s"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/download_nomal_img"
+            android:background="@color/red"
+            style="@style/item_img_b_size"/>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/down_nomal_title_tv"
+                style="@style/title2_b_font"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/download_item_commend"
+                    android:button="@mipmap/download_item_commend"
+                    style="@style/nomal_blue_font"
+                    android:layout_width="wrap_content"
+                    android:text="@string/commend"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_weight="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/download_item_qestion"
+                    android:button="@mipmap/download_item_questing"
+                    android:layout_width="wrap_content"
+                    style="@style/nomal_blue_font"
+                    android:text="@string/question"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/download_play_img"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/player"
+            android:visibility="gone"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/download_downloading_img"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/downloading"
+            android:visibility="gone"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/download_pause_img"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/pause"
+            android:visibility="gone"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/download_wait_img"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/wait"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

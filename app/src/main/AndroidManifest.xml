@@ -62,6 +62,10 @@
         <activity
             android:name=".main.settings.AboutUsActivity"
             android:label="@string/app_name"/>
+
+        <activity
+            android:name=".main.grow.VedioCenterActivity"
+            android:label="@string/app_name"/>
     </application>
 
 </manifest>

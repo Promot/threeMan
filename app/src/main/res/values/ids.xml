@@ -2,4 +2,5 @@
 <resources>
 
     <item type="id" name="collect_btn"/>
+    <item type="id" name="del_btn"/>
 </resources>

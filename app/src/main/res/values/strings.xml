@@ -88,4 +88,24 @@
     <string name="about_njsx">南京三身行</string>
     <string name="content_us">联系我们：</string>
 
+    <string name="vedio_center">视频中心</string>
+    <string-array name="vedio_center_tabs">
+        <item>下载观看</item>
+        <item>我的收藏</item>
+        <item>浏览记录</item>
+    </string-array>
+
+    <string-array name="download_tab">
+        <item>已完成</item>
+        <item>未完成</item>
+    </string-array>
+    <string name="downloaded">已完成</string>
+    <string name="unloaded">未完成</string>
+    <string name="commend">推荐</string>
+    <string name="question">提问</string>
+    <string name="free_disk">可用空间</string>
+    <string name="used_desk">已占用</string>
+    <string name="select_all">全选</string>
+    <string name="delete">删除</string>
+
 </resources>

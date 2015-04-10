@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <com.promote.jchlib.util.view.PagerSlidingTabStrip
+        android:id="@+id/vediocenter_strip"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_height"
+        app:curTabtextColor="@color/title_blue"
+        app:curTabtextSize="@dimen/subtitle_font"
+        android:background="@android:color/white"
+        app:indicatorColor="@color/title_blue"
+        app:indicatorHeight="2dp"
+        app:tabtextAllCaps="false"
+        app:tabtextColor="@color/tab_gray"
+        app:tabtextSize="@dimen/subtitle_font"
+        app:underlineColor="@android:color/white"
+        app:underlineHeight="1dp"></com.promote.jchlib.util.view.PagerSlidingTabStrip>
+
+    <android.support.v4.view.ViewPager
+        android:layout_below="@id/vediocenter_strip"
+        android:id="@+id/vediocenter_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</RelativeLayout>

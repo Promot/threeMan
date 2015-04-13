@@ -1,8 +1,50 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="com.promote.threeman.main.grow.MyCollectionFrag">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:animateLayoutChanges="true"
+              android:animationCache="true"
+              android:orientation="vertical"
+              tools:context="com.promote.threeman.main.grow.MyCollectionFrag">
 
+    <ListView
+        android:id="@+id/video_collect_lv"
+        android:layout_weight="1"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/common_pad_m"
+        android:padding="@dimen/common_pad_m"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
 
-</FrameLayout>
+    <LinearLayout
+        android:id="@+id/download_del_ll"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:background="@color/divid_gray"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/download_del_sel_tv"
+            style="@style/subTitle_b_font"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/white_pure"
+            android:layout_margin="1px"
+            android:text="@string/select_all"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/download_del_tv"
+            android:layout_weight="1"
+            style="@style/subTitle_blue_font"
+            android:layout_margin="1px"
+            android:gravity="center"
+            android:text="@string/delete"
+            android:background="@color/white_pure"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</LinearLayout>

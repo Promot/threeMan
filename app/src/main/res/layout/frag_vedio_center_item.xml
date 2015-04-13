@@ -5,7 +5,7 @@
               android:layout_height="match_parent">
 
     <CheckBox
-        android:id="@+id/download_nomal_cb"
+        android:id="@+id/video_center_cb"
         android:layout_width="wrap_content"
         android:visibility="gone"
         android:layout_height="wrap_content"/>
@@ -18,7 +18,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/download_nomal_img"
+            android:id="@+id/video_center_item_img"
             android:background="@color/red"
             style="@style/item_img_b_size"/>
 
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/down_nomal_title_tv"
+                android:id="@+id/video_center_title_tv"
                 style="@style/title2_b_font"
                 android:ellipsize="end"
                 android:maxLines="2"
@@ -41,35 +41,11 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                style="@style/nomal_grag_font"
+                android:id="@+id/video_center_author_tv"/>
+
         </LinearLayout>
-
-        <ImageView
-            android:id="@+id/download_play_img"
-            android:layout_width="wrap_content"
-            android:src="@mipmap/player"
-            android:visibility="gone"
-            android:layout_height="wrap_content"/>
-
-        <ImageView
-            android:id="@+id/download_downloading_img"
-            android:layout_width="wrap_content"
-            android:src="@mipmap/downloading"
-            android:visibility="gone"
-            android:layout_height="wrap_content"/>
-
-        <ImageView
-            android:id="@+id/download_pause_img"
-            android:layout_width="wrap_content"
-            android:src="@mipmap/pause"
-            android:visibility="gone"
-            android:layout_height="wrap_content"/>
-
-        <ImageView
-            android:id="@+id/download_wait_img"
-            android:layout_width="wrap_content"
-            android:src="@mipmap/wait"
-            android:layout_height="wrap_content"/>
 
 
     </LinearLayout>

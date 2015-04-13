@@ -1,8 +1,8 @@
 package com.promote.threeman.main.grow;
 
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +25,7 @@ import java.util.ArrayList;
  * <p/>
  * 下载观看。
  */
-public class DownloadFrag extends Fragment {
+public class DownloadFrag extends VideoBaseFragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -107,7 +107,8 @@ public class DownloadFrag extends Fragment {
 
         adapter = new MyAdapter();
         downloadelv.setAdapter(adapter);
-
+        downloadelv.expandGroup(0);
+        downloadelv.expandGroup(1);
 
     }
 
@@ -117,7 +118,27 @@ public class DownloadFrag extends Fragment {
         downloadingBeans = DownloadTest.getDownloadingBean();
     }
 
+    @Override
+    public void delCheck() {
+
+    }
+
+    /**
+     * adapter.
+     */
     private class MyAdapter extends BaseExpandableListAdapter {
+
+        private OnCommandClickListener commandClickListener = null;
+        private OnInfoClickListener infoClickListener = null;
+        private OnRequestClickListener requestClickListener = null;
+        private OnPlayClickListener playClickListener = null;
+
+        public MyAdapter() {
+            commandClickListener = new OnCommandClickListener();
+            infoClickListener = new OnInfoClickListener();
+            requestClickListener = new OnRequestClickListener();
+            playClickListener = new OnPlayClickListener();
+        }
 
         @Override
         public int getGroupCount() {
@@ -209,13 +230,20 @@ public class DownloadFrag extends Fragment {
             DownloadBean downloadBean = null;
             if (groupPosition == 0) {       //下载完成。
                 downloadBean = downloadedBeans.get(childPosition);
-
             } else {                //未下载完成。
                 downloadBean = downloadingBeans.get(childPosition);
 
             }
 
             viewHolder.nameTv.setText(downloadBean.getTitle());
+            viewHolder.commandCB.setTag(downloadBean.getId());
+            viewHolder.questionCB.setTag(downloadBean.getId());
+            viewHolder.playerImg.setTag(downloadBean.getId());
+            viewHolder.commandCB.setOnClickListener(commandClickListener);
+            viewHolder.questionCB.setOnClickListener(requestClickListener);
+            viewHolder.playerImg.setOnClickListener(playClickListener);
+
+
             if (downloadBean.getState() == DOWNLOAD_PALY) {
                 onPlayUi(viewHolder);
             } else if (downloadBean.getState() == DOWNLOAD_WAIT) {
@@ -234,6 +262,54 @@ public class DownloadFrag extends Fragment {
             return true;
         }
 
+    }
+
+    /**
+     * 信息详情按钮点击事件。
+     */
+    private class OnInfoClickListener implements View.OnClickListener {
+
+        @Override
+        public void onClick(View v) {
+            int id = (int) v.getTag();      //
+
+
+        }
+    }
+
+    private class OnPlayClickListener implements View.OnClickListener {
+
+        @Override
+        public void onClick(View v) {
+
+        }
+    }
+
+    /**
+     * 推荐点击事件。
+     */
+    private class OnCommandClickListener implements View.OnClickListener {
+
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getActivity(), CommendActivity.class);
+            intent.putExtra("id", (int) v.getTag());
+            startActivity(intent);
+        }
+    }
+
+    /**
+     * 提问点击事件。
+     */
+    private class OnRequestClickListener implements View.OnClickListener {
+
+
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getActivity(), QuestionActivity.class);
+            intent.putExtra("id", (int) v.getTag());
+            startActivity(intent);
+        }
     }
 
     /**

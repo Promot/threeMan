@@ -1,4 +1,4 @@
-package com.promote.threeman.detailInfo;
+package com.promote.threeman.main.grow;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,19 +7,22 @@ import com.promote.threeman.R;
 import com.promote.threeman.actionbar.HomeActionBarActivity;
 
 /**
- * 按需求选择跳转而来的详情界面。
+ * Created by ACER on 2015/4/13.
+ * <p/>
+ * 我要推荐。
  */
-public class NeedClassInfoActivity extends HomeActionBarActivity {
+public class CommendActivity extends HomeActionBarActivity {
 
 
     @Override
     protected View addContentView() {
 
+        setActionType(COMM_ACTIONTYPE);
+        setTitle(R.string.my_commend);
         View view = LayoutInflater.from(getBaseContext()).inflate(R.layout
-                .activity_need_class_info, null);
+                .activity_commend_layout, null);
+
 
         return view;
     }
-
-
 }

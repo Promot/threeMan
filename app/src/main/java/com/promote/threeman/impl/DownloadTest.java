@@ -18,6 +18,7 @@ public class DownloadTest {
         ArrayList<DownloadBean> downloadBeans = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
             DownloadBean downloadBean = new DownloadBean();
+            downloadBean.setId(i);
             if (i < 10)
                 downloadBean.setState(i % 4 + 1);
             else

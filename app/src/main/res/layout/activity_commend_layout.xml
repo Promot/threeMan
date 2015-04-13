@@ -1,0 +1,42 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            style="@style/common_pad_b_height"
+            tools:context="com.promote.threeman.main.settings.FeedbackActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:src="@mipmap/feedback_img"
+            android:scaleType="centerInside"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/commend_et"
+            android:layout_marginTop="5dp"
+            android:hint="@string/common_hint"
+            android:gravity="top"
+            android:padding="@dimen/common_pad_m"
+            style="@style/nomal_b_font"
+            android:layout_width="match_parent"
+            android:background="@drawable/white_shape_bg"
+            android:layout_height="200dp"/>
+
+        <Button
+            android:id="@+id/commend_sub_btn"
+            android:background="@drawable/blue_btn_shape"
+            style="@style/title2_w_font_b"
+            android:text="@string/sub_common"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+</ScrollView>

@@ -106,6 +106,27 @@
     <string name="free_disk">可用空间</string>
     <string name="used_desk">已占用</string>
     <string name="select_all">全选</string>
-    <string name="delete">删除</string>
+    <string name="delete">删除</string>‘
+
+    <string-array name="brows_vedio_group">
+        <item name="yesterday">昨天</item>
+        <item name="ealier">更早</item>
+    </string-array>
+
+    <!-- 按需课程详情tab -->
+    <string name="cn_info_tab1">详情</string>
+    <string name="cn_info_tab2">推荐（%s）</string>
+    <string name="cn_info_tab3">答疑</string>
+
+    <string name="cn_info_buy">购买课程</string>
+    <string name="cn_info_bought">已购买</string>
+    <string name="my_commend">我要推荐</string>
+
+    <string name="common_hint">向大伙推荐一下吧!</string>
+    <string name="sub_common">提交推荐</string>
+
+    <string name="my_question">我要提问</string>
+    <string name="question_hint">请输入您的问题！</string>
+    <string name="sub_question">提交问题</string>
 
 </resources>

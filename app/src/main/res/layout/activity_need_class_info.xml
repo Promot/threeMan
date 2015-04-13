@@ -1,16 +1,100 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                tools:context="com.promote.threeman.detailInfo.NeedClassInfoActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:paddingLeft="@dimen/common_pad_m"
+              android:paddingTop="@dimen/common_pad_m"
+              android:paddingRight="@dimen/common_pad_m"
+              tools:context="com.promote.threeman.detailInfo.NeedClassInfoActivity">
 
-    <TextView
-        android:text="@string/app_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/nc_info_img"
+        style="@style/common_pad_white_s"
+        android:src="@color/sel_blue"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"/>
 
-</RelativeLayout>
+    <com.promote.jchlib.util.view.PagerSlidingTabStrip
+        android:layout_width="match_parent"
+        android:id="@+id/nc_info_tab"
+        android:layout_marginTop="@dimen/common_pad_m"
+        android:layout_height="50dp"
+        app:curTabtextColor="@color/title_blue"
+        app:curTabtextSize="@dimen/subtitle_font"
+        android:background="@android:color/white"
+        app:indicatorColor="@color/title_blue"
+        app:indicatorHeight="2dp"
+        app:tabtextAllCaps="false"
+        app:tabtextColor="@color/tab_gray"
+        app:tabtextSize="@dimen/subtitle_font"
+        app:underlineColor="@color/divid_gray"
+        app:underlineHeight="1px">>
+    </com.promote.jchlib.util.view.PagerSlidingTabStrip>
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/nc_info_lv"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/common_pad_m"
+        android:layout_height="wrap_content"></android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/nc_info_btn_ll"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:paddingTop="@dimen/common_pad_m"
+        android:paddingBottom="@dimen/common_pad_m"
+        android:background="@drawable/white_top_gray_shap"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@mipmap/cn_info_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/cn_info_download_num"
+                style="@style/nomal_blue_font"
+                android:text="(127)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/nc_btn_buy_btn"
+            android:background="@drawable/blue_btn_shape"
+            android:layout_width="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/cn_info_buy"
+            style="@style/whit_title_font"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/cn_collect_cb"
+                android:button="@drawable/cn_collect_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

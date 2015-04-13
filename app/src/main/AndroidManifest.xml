@@ -65,6 +65,17 @@
 
         <activity
             android:name=".main.grow.VedioCenterActivity"
+            android:launchMode="singleTop"
+            android:label="@string/app_name"/>
+
+        <activity
+            android:name=".main.grow.CommendActivity"
+            android:launchMode="singleTop"
+            android:label="@string/app_name"/>
+
+        <activity
+            android:name=".main.grow.QuestionActivity"
+            android:launchMode="singleTop"
             android:label="@string/app_name"/>
     </application>
 

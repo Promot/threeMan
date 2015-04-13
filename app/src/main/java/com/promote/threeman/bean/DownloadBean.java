@@ -8,6 +8,8 @@ import android.os.Parcelable;
  */
 public class DownloadBean implements Parcelable {
 
+    private int id;
+
     /**
      * 现在状态。
      */
@@ -70,6 +72,15 @@ public class DownloadBean implements Parcelable {
     }
 
 
+    public int getId() {
+
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -82,6 +93,7 @@ public class DownloadBean implements Parcelable {
         dest.writeString(this.title);
         dest.writeString(this.url);
         dest.writeString(this.uri);
+        dest.writeInt(this.id);
     }
 
     public DownloadBean() {
@@ -93,6 +105,7 @@ public class DownloadBean implements Parcelable {
         this.title = in.readString();
         this.url = in.readString();
         this.uri = in.readString();
+        this.id = in.readInt();
     }
 
     public static final Parcelable.Creator<DownloadBean> CREATOR = new Parcelable.Creator<DownloadBean>() {

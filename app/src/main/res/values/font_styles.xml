@@ -12,6 +12,16 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="nomal_w_font">
+        <item name="android:textSize">@dimen/nomal_font</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="snomal_w_font">
+        <item name="android:textSize">@dimen/snomal_font</item>
+        <item name="android:textColor">@color/white_pure</item>
+    </style>
+
     <style name="title2_b_font">
         <item name="android:textSize">@dimen/title_font2</item>
         <item name="android:textColor">@color/black</item>
@@ -65,5 +75,6 @@
         <item name="android:textSize">@dimen/subtitle_font</item>
         <item name="android:textColor">@color/red</item>
     </style>
+
 
 </resources>

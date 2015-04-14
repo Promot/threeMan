@@ -77,6 +77,16 @@
             android:name=".main.grow.QuestionActivity"
             android:launchMode="singleTop"
             android:label="@string/app_name"/>
+
+        <activity
+            android:name=".industry.IndustryServerActivity"
+            android:launchMode="singleTop"
+            android:label="@string/app_name"/>
+        <activity
+            android:name=".industry.IndustryInfoListActivity"
+            android:launchMode="singleTop"
+            android:label="@string/app_name"/>
+
     </application>
 
 </manifest>

@@ -22,6 +22,7 @@ import com.promote.jchlib.util.view.ScrollGridView;
 import com.promote.threeman.R;
 import com.promote.threeman.detailInfo.VideoInfoActivity;
 import com.promote.threeman.impl.HomeTestData;
+import com.promote.threeman.industry.IndustryServerActivity;
 
 import java.util.ArrayList;
 import java.util.concurrent.Executors;
@@ -131,6 +132,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
 
         sixTypeAdapter = new SixTypeAdapter();
         home6type.setAdapter(sixTypeAdapter);
+        home6type.setOnItemClickListener(new IndustryItemOnclickListener());
 
         initTestData();
     }
@@ -430,6 +432,16 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
             Intent intent = new Intent(getActivity(), VideoInfoActivity.class);
+            startActivity(intent);
+        }
+    }
+
+    private class IndustryItemOnclickListener implements AdapterView.OnItemClickListener {
+
+
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            Intent intent = new Intent(getActivity(), IndustryServerActivity.class);
             startActivity(intent);
         }
     }

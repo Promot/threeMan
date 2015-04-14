@@ -31,4 +31,17 @@ public class ThreeTestData {
         return datas;
     }
 
+    public ThreeFragBean getThreeTestData() {
+
+        ThreeFragBean testData = new ThreeFragBean();
+        testData.setName("标题企业 ");
+        testData.setDate("2015.4.3");
+        testData.setSubTitle("，副标题，副标题，副标题副标题，副标题，副标题，副，副标题，副标题，副标题副标题，副标题，副标题，副，副标题，副标题，副标题副标题，副标题，副标题，副");
+        testData.setContent("企业 " +
+                "内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容" +
+                "副标题，副标题，副标题，副标题，副标题，副标题副标题，副标题，副标题，副标题，副标题，副标题副标题，副标题，副标题，副标题，副标题，副标题副标题，副标题，副标题，副标题，副标题，副标题副标题，副标题，副标题，副标题，副标题，副标题");
+        testData.setType(2);
+        testData.setImgUrl("标题企业 img");
+        return testData;
+    }
 }

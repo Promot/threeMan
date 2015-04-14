@@ -1,10 +1,12 @@
 package com.promote.threeman.main.grow;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.ImageView;
@@ -14,6 +16,7 @@ import android.widget.TextView;
 
 import com.promote.threeman.R;
 import com.promote.threeman.bean.BrowsHistoryBean;
+import com.promote.threeman.detailInfo.NeedClassInfoActivity;
 import com.promote.threeman.impl.BrowsHistoryDataTest;
 
 import java.util.ArrayList;
@@ -22,8 +25,9 @@ import java.util.ArrayList;
  * A simple {@link android.support.v4.app.Fragment} subclass.
  * Use the {@link com.promote.threeman.main.grow.MyCollectionFrag#newInstance} factory method to
  * create an instance of this fragment.
+ * 我的收集界面。
  */
-public class MyCollectionFrag extends VideoBaseFragment {
+public class MyCollectionFrag extends VideoBaseFragment implements AdapterView.OnItemClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -105,6 +109,14 @@ public class MyCollectionFrag extends VideoBaseFragment {
 
         adapter = new MyAdapter();
         videocollectlv.setAdapter(adapter);
+        videocollectlv.setOnItemClickListener(this);
+
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Intent intent = new Intent(MyCollectionFrag.this.getActivity(), NeedClassInfoActivity.class);
+        startActivity(intent);
     }
 
     private class MyAdapter extends BaseAdapter {

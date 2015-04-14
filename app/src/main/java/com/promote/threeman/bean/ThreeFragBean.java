@@ -40,6 +40,7 @@ public class ThreeFragBean extends SourceBean {
         dest.writeString(this.date);
         dest.writeString(this.content);
         dest.writeString(this.subTitle);
+        dest.writeInt(this.id);
     }
 
     public ThreeFragBean() {

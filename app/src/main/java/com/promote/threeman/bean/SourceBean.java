@@ -8,6 +8,8 @@ import android.os.Parcelable;
  * 课程实体类， 基类。
  */
 public abstract class SourceBean implements Parcelable {
+
+    protected int id;
     /**
      * 图片url *
      */
@@ -68,5 +70,11 @@ public abstract class SourceBean implements Parcelable {
         this.subTitle = subTitle;
     }
 
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 }

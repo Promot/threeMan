@@ -129,4 +129,6 @@
     <string name="question_hint">请输入您的问题！</string>
     <string name="sub_question">提交问题</string>
 
+    <string name="industry_server">专业服务</string>
+
 </resources>

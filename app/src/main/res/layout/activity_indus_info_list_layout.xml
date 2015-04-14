@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/industry_info_head_layout"
+        android:background="@drawable/indus_info_list_head_bg"
+        android:layout_width="match_parent"
+        android:animationCache="true"
+        android:animateLayoutChanges="true"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/indusutry_info_head_back"
+            android:src="@drawable/back_sel"
+            android:scaleType="centerInside"
+            android:layout_width="@dimen/action_height"
+            android:layout_height="@dimen/action_height"/>
+
+        <ImageButton
+            android:id="@+id/industry_info_head_conv_btn"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/industry_head_down_btn"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/industry_info_head_img"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@color/red"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/common_item_img_size"
+            android:layout_height="@dimen/common_item_img_size"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/industry_info_content_ll"
+            android:gravity="center_horizontal"
+            android:layout_alignTop="@id/industry_info_head_img"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/industry_info_head_conv_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/industry_info_head_view"
+                android:layout_width="@dimen/common_item_img_size"
+                android:layout_height="@dimen/common_item_img_size"/>
+
+            <TextView
+                android:id="@+id/industry_info_head_title_tv"
+                android:layout_width="wrap_content"
+                style="@style/title2_w_font_b"
+                android:maxEms="8"
+                android:layout_marginTop="10dp"
+                android:text="发的范德萨发生范德萨范德萨"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/industry_info_head_des_tv"
+                style="@style/snomal_w_font"
+                android:layout_marginTop="10dp"
+                android:maxEms="15"
+                android:text="发的范德萨发生范德萨范德萨范德萨发大水发的范德萨发生范德萨范德萨范德萨发大水发的范德萨发生范德萨范德萨范德萨发大水发的范德萨发生范德萨范德萨范德萨发大水"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/industry_info_list"
+        android:padding="@dimen/common_pad_m"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/common_pad_m"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+</LinearLayout>

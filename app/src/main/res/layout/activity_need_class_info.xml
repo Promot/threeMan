@@ -4,42 +4,50 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
-              android:paddingLeft="@dimen/common_pad_m"
-              android:paddingTop="@dimen/common_pad_m"
-              android:paddingRight="@dimen/common_pad_m"
               tools:context="com.promote.threeman.detailInfo.NeedClassInfoActivity">
 
-    <ImageView
-        android:id="@+id/nc_info_img"
-        style="@style/common_pad_white_s"
-        android:src="@color/sel_blue"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="180dp"/>
-
-    <com.promote.jchlib.util.view.PagerSlidingTabStrip
-        android:layout_width="match_parent"
-        android:id="@+id/nc_info_tab"
-        android:layout_marginTop="@dimen/common_pad_m"
-        android:layout_height="50dp"
-        app:curTabtextColor="@color/title_blue"
-        app:curTabtextSize="@dimen/subtitle_font"
-        android:background="@android:color/white"
-        app:indicatorColor="@color/title_blue"
-        app:indicatorHeight="2dp"
-        app:tabtextAllCaps="false"
-        app:tabtextColor="@color/tab_gray"
-        app:tabtextSize="@dimen/subtitle_font"
-        app:underlineColor="@color/divid_gray"
-        app:underlineHeight="1px">>
-    </com.promote.jchlib.util.view.PagerSlidingTabStrip>
-
-    <android.support.v4.view.ViewPager
-        android:layout_width="match_parent"
+        android:paddingLeft="@dimen/common_pad_m"
         android:layout_weight="1"
-        android:id="@+id/nc_info_lv"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="@dimen/common_pad_m"
-        android:layout_height="wrap_content"></android.support.v4.view.ViewPager>
+        android:paddingTop="@dimen/common_pad_m"
+        android:paddingRight="@dimen/common_pad_m"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/nc_info_img"
+            style="@style/common_pad_white_s"
+            android:src="@color/sel_blue"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"/>
+
+        <com.promote.jchlib.util.view.PagerSlidingTabStrip
+            android:layout_width="match_parent"
+            android:id="@+id/nc_info_tab"
+            android:layout_marginTop="@dimen/common_pad_m"
+            android:layout_height="50dp"
+            app:curTabtextColor="@color/title_blue"
+            app:curTabtextSize="@dimen/subtitle_font"
+            android:background="@android:color/white"
+            app:indicatorColor="@color/title_blue"
+            app:indicatorHeight="2dp"
+            app:tabtextAllCaps="false"
+            app:tabtextColor="@color/tab_gray"
+            app:tabtextSize="@dimen/subtitle_font"
+            app:underlineColor="@color/divid_gray"
+            app:underlineHeight="1px">>
+        </com.promote.jchlib.util.view.PagerSlidingTabStrip>
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/nc_info_lv"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="@dimen/common_pad_m"
+            android:layout_height="wrap_content"></android.support.v4.view.ViewPager>
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/nc_info_btn_ll"
@@ -96,5 +104,4 @@
         </LinearLayout>
 
     </LinearLayout>
-
 </LinearLayout>
